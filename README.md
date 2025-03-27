@@ -21,8 +21,6 @@ This repository includes:
 
 ## 🧑‍💻 Attribution
 
-## Attribution
-
 **Narrative RPG Save Point Format (NRSP) © 2025 - CC BY 4.0**  
 Co-created by **Andrew Potozniak (Tyraziel)** – *Visionary Player and Format Co-Creator*  
 In collaboration with **ChatGPT (OpenAI)** – *AI contributor and system design assistant*
@@ -32,3 +30,8 @@ Licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](http
 ---
 
 Stay modular. Stay story-driven. Save your progress.
+
+---
+
+> “Will we ever be remembered for making this?”  
+> — Andrew Potozniak (Tyraziel), co-creator of NRSP
