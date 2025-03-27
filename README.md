@@ -7,7 +7,7 @@ The **Narrative RPG Save Point Format (NRSP)** is an open standard for recording
 The **Narrative RPG Save Point Format (NRSP)** is built around the following principles:
 
 - **System-Agnostic First**  
-  While the format originated in a specific Pokémon-inspired game, NRSP is designed to support *any* narrative RPG, regardless of mechanics or setting.
+  While the format originated in a specific system inspired game, NRSP is designed to support *any* narrative RPG, regardless of mechanics or setting.
 
 - **Human-Readable, AI-Compatible**  
   Markdown is the shared language of humans and machines. Every file should be easily written, parsed, and versioned.
