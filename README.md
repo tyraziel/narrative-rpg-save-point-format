@@ -16,11 +16,31 @@ It preserves not only stats and inventory but the emotional, narrative, and cont
 
 ---
 
-## 👥 Who Created It
+## 💡 Why Use NRSP?
 
-**Co-created by:**
-- **Andrew Potozniak (Tyraziel)** – Visionary Player and Narrative Architect
-- **ChatGPT (OpenAI)** – AI format assistant and system co-designer
+- Preserve story arcs and characters across sessions or systems  
+- Enable AI-assisted narrative tools and branching storylines  
+- Make it easy to track plot threads, key items, and character moments  
+- Designed for Git-based version control and long-term archival  
+
+---
+
+## 📂 File Types & Rationale
+
+NRSP uses a modular file structure where each file type serves a specific narrative or gameplay purpose:
+
+| File Type     | Extension       | Purpose                                                                 |
+|---------------|----------------|-------------------------------------------------------------------------|
+| SavePoint     | `.NRSP.md`     | Captures a narrative arc, including story summary, character state, and links |
+| Session Log   | `.SLD.md`      | Optional in-world or out-of-world transcript of what occurred in a session |
+| Character     | `.CS.md`       | Represents a player character, NPC, creature, or entity in the narrative |
+| Town          | `.T.md`        | Details about a location, hub, or region                                |
+| NPC           | `.NPC.md`      | Individual non-player characters, often referenced in SavePoints or Towns |
+
+All files follow the format: `Name.Type.md`  
+Example: `Zeke.CS.md`, `Arc1.SLD.md`, `Bramblebend.T.md`
+
+This structure keeps each file focused and swappable, while supporting bundled storytelling across sessions.
 
 ---
 
@@ -28,11 +48,12 @@ It preserves not only stats and inventory but the emotional, narrative, and cont
 
 You're playing a custom Pokémon RPG with a character named Zeke. After each major story arc, you create a `.NRSP.md` file that:
 
-- Describes what happened in the story
-- Lists important characters and Pokémon
-- Notes key decisions made and items gained
-- Links to related sheets like `Zeke.CS.md`, `Spark.CS.md`, or `Bramblebend.T.md`
+- Describes what happened in the story  
+- Lists important characters and Pokémon  
+- Notes key decisions made and items gained  
+- Links to related sheets like `Zeke.CS.md`, `Spark.CS.md`, or `Bramblebend.T.md`  
 
+---
 
 ## 📐 NRSP Design Philosophy
 
@@ -56,25 +77,30 @@ The **Narrative RPG Save Point Format (NRSP)** is built around the following pri
 - **Respect the Story Space**  
   Content should remain broadly PG-13 and inclusive. Stories can go deep — but not off the rails.
 
+- **Everything Can Live in One File**  
+  NRSP is modular by design, but not modular by force. You can store your entire session — character, story, team, and notes — in a single `.NRSP.md` file, or break it out into as many supporting files as you need.
+
+---
+
+## 👥 Who Created It
+
+**Co-created by:**
+- **Andrew Potozniak (Tyraziel)** – Visionary Player and Narrative Architect  
+- **ChatGPT (OpenAI)** – AI format assistant and system co-designer  
+
+---
 
 ## 📦 What's in This Repository
 
 This repository includes:
 
-- ✅ `SavePoint_Format_v0_0.NRSP.md` – Original single-character emotional snapshot concept
-- ✅ `SavePoint_Format_v0_1.NRSP.md` – Introduced timeline metadata and SavePoint linking
-- ✅ `SavePoint_Format_v0_2.NRSP.md` – Unified trainer + narrative SaveFile (hybrid form)
-- ✅ `SavePoint_Format_v0_3.NRSP.md` – Modular, bundle-ready SaveFile with timeline, trainer, and Pokémon team state
-- 📄 `LICENSE.md` – Creative Commons Attribution 4.0 License (CC BY 4.0)
+- ✅ `SavePoint_Format_v0_3.NRSP.md` – The latest modular SaveFile spec (timeline, character, party, links)  
+- 📄 `LICENSE.md` – Creative Commons Attribution 4.0 License (CC BY 4.0)  
 
-## 💡 Why Use NRSP?
+---
 
-- Preserve story arcs and characters across sessions or systems
-- Enable AI-assisted narrative tools and branching storylines
-- Make it easy to track plot threads, key items, and character moments
-- Designed for Git-based version control and long-term archival
+## 🧑‍💻 [License](LICENSE.md)
 
-## 🧑‍💻 Attribution
 **Narrative RPG Save Point Format (NRSP) © 2025 – CC BY 4.0**  
 **Andrew Potozniak (Tyraziel)** – *Visionary Player and Lead Designer*  
 Co-created and in collaboration with **ChatGPT (OpenAI)** – *AI contributor and system design assistant*
