@@ -2,6 +2,29 @@
 
 The **Narrative RPG Save Point Format (NRSP)** is an open standard for recording the state of narrative-driven tabletop or solo RPG campaigns. It provides a modular, Markdown-based structure for saving character state, story progress, emotional beats, and world data in a way that is both human- and machine-readable.
 
+## 📐 NRSP Design Philosophy
+
+The **Narrative RPG Save Point Format (NRSP)** is built around the following principles:
+
+- **System-Agnostic First**  
+  While the format originated in a specific Pokémon-inspired game, NRSP is designed to support *any* narrative RPG, regardless of mechanics or setting.
+
+- **Human-Readable, AI-Compatible**  
+  Markdown is the shared language of humans and machines. Every file should be easily written, parsed, and versioned.
+
+- **Modularity Is Key**  
+  Files are separated by type and function (`.NRSP.md`, `.SLD.md`, `.CS.md`, etc.) so creators can mix, match, or extend without breaking structure.
+
+- **Narrative Before Numbers**  
+  Save Points focus on the emotional, narrative, and contextual state of the story — not just stat blocks or battle logs.
+
+- **Git-Friendly**  
+  All files are designed to play well with Git for branching timelines, version control, and community collaboration.
+
+- **Respect the Story Space**  
+  Content should remain broadly PG-13 and inclusive. Stories can go deep — but not off the rails.
+
+
 ## 📦 What's in This Repository
 
 This repository includes:
@@ -20,16 +43,9 @@ This repository includes:
 - Designed for Git-based version control and long-term archival
 
 ## 🧑‍💻 Attribution
-
 **Narrative RPG Save Point Format (NRSP) © 2025 – CC BY 4.0**  
 **Andrew Potozniak (Tyraziel)** – *Visionary Player and Lead Designer*  
 Co-created and in collaboration with **ChatGPT (OpenAI)** – *AI contributor and system design assistant*
-
-Licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
-
----
-
-Stay modular. Stay story-driven. Save your progress.
 
 ---
 
