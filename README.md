@@ -1,13 +1,45 @@
 # Narrative RPG Save Point Format (NRSP)
 
-The **Narrative RPG Save Point Format (NRSP)** is an open standard for recording the state of narrative-driven tabletop or solo RPG campaigns. It provides a modular, Markdown-based structure for saving character state, story progress, emotional beats, and world data in a way that is both human- and machine-readable.
+The **Narrative RPG Save Point Format (NRSP)** is a modular, markdown-based format designed to capture the state of a tabletop or solo roleplaying story at any moment — like a save point in a video game.
+
+It preserves not only stats and inventory but the emotional, narrative, and contextual state of the story across sessions and arcs.
+
+---
+
+## 🧠 What Makes It Special
+
+- **Tracks Story Progression** – Captures what happened in each arc or session
+- **Modular by Design** – Links to character sheets, NPCs, towns, encounters, items, and more
+- **Supports Branching Timelines** – Handles alternate arcs, forks, or “what-if” paths
+- **Git-Friendly** – Easy to save, share, diff, and revisit any moment in the narrative
+- **AI + Human Readable** – Write it by hand, or let an AI parse or continue the story
+
+---
+
+## 👥 Who Created It
+
+**Co-created by:**
+- **Andrew Potozniak (Tyraziel)** – Visionary Player and Narrative Architect
+- **ChatGPT (OpenAI)** – AI format assistant and system co-designer
+
+---
+
+## 🎮 Use Case Example
+
+You're playing a custom Pokémon RPG with a character named Zeke. After each major story arc, you create a `.NRSP.md` file that:
+
+- Describes what happened in the story
+- Lists important characters and Pokémon
+- Notes key decisions made and items gained
+- Links to related sheets like `Zeke.CS.md`, `Spark.CS.md`, or `Bramblebend.T.md`
+
 
 ## 📐 NRSP Design Philosophy
 
 The **Narrative RPG Save Point Format (NRSP)** is built around the following principles:
 
 - **System-Agnostic First**  
-  While the format originated in a specific system inspired game, NRSP is designed to support *any* narrative RPG, regardless of mechanics or setting.
+  While the format originated in a game inspired by a specific system, NRSP is designed to support *any* narrative RPG, regardless of mechanics, theme, or setting.
 
 - **Human-Readable, AI-Compatible**  
   Markdown is the shared language of humans and machines. Every file should be easily written, parsed, and versioned.
