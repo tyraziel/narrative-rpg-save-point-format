@@ -1,6 +1,6 @@
 # Narrative RPG Save Point Format (NRSP)
 
-The **Narrative RPG Save Point Format (NRSP)** is a modular, markdown-based format designed to capture the state of a tabletop or solo roleplaying story at any moment — like a save point in a video game.
+The **Narrative RPG Save Point Format (NRSP)** is a modular, markdown-based format designed to capture the state of a tabletop or solo roleplaying story at any moment — like a save point in a story engine with long-term memory built in.
 
 It preserves not only stats and inventory but the emotional, narrative, and contextual state of the story across sessions and arcs.
 
@@ -8,11 +8,11 @@ It preserves not only stats and inventory but the emotional, narrative, and cont
 
 ## 🧠 What Makes It Special
 
-- **Tracks Story Progression** – Captures what happened in each arc or session
-- **Modular by Design** – Links to character sheets, NPCs, towns, encounters, items, and more
-- **Supports Branching Timelines** – Handles alternate arcs, forks, or “what-if” paths
-- **Git-Friendly** – Easy to save, share, diff, and revisit any moment in the narrative
-- **AI + Human Readable** – Write it by hand, or let an AI parse or continue the story
+- **Tracks Story Progression** – Captures what happened in each arc or session  
+- **Modular by Design** – Links to character sheets, NPCs, towns, encounters, items, and more  
+- **Supports Branching Timelines** – Handles alternate arcs, forks, or “what-if” paths  
+- **Git-Friendly** – Easy to save, share, diff, and revisit any moment in the narrative  
+- **AI + Human Readable** – Write it by hand, or let an AI parse or continue the story  
 
 ---
 
@@ -22,6 +22,22 @@ It preserves not only stats and inventory but the emotional, narrative, and cont
 - Enable AI-assisted narrative tools and branching storylines  
 - Make it easy to track plot threads, key items, and character moments  
 - Designed for Git-based version control and long-term archival  
+
+---
+
+## 🔍 Is This a RAG Architecture?
+
+Yes — although it wasn't initially built using traditional retrieval-augmented generation (RAG) terminology, NRSP **functionally operates as a modular RAG architecture** designed specifically for narrative continuity and collaborative storytelling.
+
+Unlike traditional RAG pipelines (which rely on embedding vectors and opaque text chunks), NRSP uses:
+- **Structured modular files** with known types (`.NRSP.md`, `.CS.md`, etc.)
+- **Explicit semantic links** (e.g., timeline, previous arcs, party composition)
+- **Human- and AI-driven retrieval** based on filenames, metadata, and purpose
+- **Deterministic narrative injection** into prompts or AI workflows
+
+This allows NRSP to serve as a *narrative retrieval layer* — offering long-term memory, branching continuity, and reliable context reuse without hallucination-prone vector similarity.
+
+> NRSP is, in essence, a domain-specific RAG architecture — one that prioritizes clarity, story integrity, and authorial control over brute-force retrieval.
 
 ---
 
@@ -79,6 +95,9 @@ The **Narrative RPG Save Point Format (NRSP)** is built around the following pri
 
 - **Everything Can Live in One File**  
   NRSP is modular by design, but not modular by force. You can store your entire session — character, story, team, and notes — in a single `.NRSP.md` file, or break it out into as many supporting files as you need.
+
+- **RAG Without the Guesswork**  
+  NRSP gives creators and AI systems deterministic memory access, enabling long-form generation without relying on fuzzy embeddings or arbitrary chunking. It's retrieval-augmented generation, structured for storytellers.
 
 ---
 
