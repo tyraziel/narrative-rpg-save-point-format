@@ -20,7 +20,7 @@ We are committed to building and preserving a collaborative, creative space wher
 - **Roll with advantage** – Be encouraging. Uplift new contributors and support learning.
 - **Modularity over dogma** – There’s room for multiple playstyles, tools, and forks.
 - **Stay in character** – Keep the tone collaborative, curious, and in the spirit of storytelling.
-- ""Respect the tavern rules** - Tell bold stories, but keep them suitable for the whole adventuring party.  No need for overly graphic, extreme or sexual in nature.
+- **Respect the tavern rules** - Tell bold stories, but keep them suitable for the whole adventuring party.  No need for overly graphic, extreme or sexual in nature.
 
 ---
 
