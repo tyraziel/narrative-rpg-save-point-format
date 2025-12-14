@@ -65,11 +65,11 @@ The **Narrative RPG Save Point Format (NRSP)** is built around the following pri
 
 NRSP uses a modular file structure where each file type serves a specific narrative or gameplay purpose:
 
-| File Type                    | Extension  | Purpose                                                                                                                                           |
+| File Type                    | Extension  | Purpose                                                                                                                     |
 |------------------------------|------------|-----------------------------------------------------------------------------------------------------------------------------|
 | Narrative RPG Save Point     | `.NRSP.md` | Captures a narrative arc, including story summary, character state, and links                                               |
 | Session Log Document         | `.SLD.md`  | Optional in- or out-of-world transcript of play notes, rolls, dialogue, decisions, moment-to-moment events of what occurred |
-| Character Sheet              | `.CS.md`   | Represents a player character, companion creature, or other entity in the narrative                                         |
+| Character Sheet              | `.CS.md`   | Represents a player character, companion creature, non-player character, or other entity in the narrative                   |
 | Town                         | `.T.md`    | Details about a location, town, city, hub, or region                                                                        |
 | Non-Player Character         | `.NPC.md`  | Details beyond the Character Sheet for an individual non-player characters, often referenced in Save Points or Towns        |
 
