@@ -4,6 +4,10 @@
 
 The Narrative RPG Save Point Format (NRSP) defines a deterministic representation of a narrative state that can be reloaded to continue a story.
 
+NRSP files are organized into named sections using Markdown headers. Section headers define the semantic meaning of the content that follows.
+
+Subheadings within sections are optional unless otherwise specified.
+
 ---
 
 ## 💾 Header Metadata in YAML
@@ -84,9 +88,88 @@ The party reached the Broken Bridge and learned it is controlled by hostile forc
 
 ---
 
-## 🧑‍🎤 Player Character Snapshots
+## 🧑‍🎤 Character Snapshots
 
-A concise summary of the PCs' state(s) at this SavePoint.
+Captures the state of characters at this Save Point.
+
+This section MAY include player characters, companions, recurring NPCs, or other entities.
+
+### Character Subsection (Concept)
+
+Character Snapshots MAY serve as the complete representation of a character if the author chooses not to maintain separate Character Sheet files.
+
+Each Character defined in this section MUST start with a subsection in the form:
+`### Character: [Name]`
+
+This requirement does not apply when Characters are listed exclusively under a
+`### Character Sheets` subsection.
+
+If a Character Sheet is linked within an individual character’s subsection, it MUST be labeled in the form:
+`Character Sheet: [Name].CS.md`
+
+The structure of this section is intentionally flexible. Authors MAY include as much or as little detail as is necessary to convey character state.
+
+### Character Sheets Subsection (Concept)
+
+Alternatively, Character Sheets MAY be listed collectively under a `### Character Sheets` subsection.
+
+
+
+### Example
+
+```markdown
+## Character Snapshots
+
+### Character: Elara
+- Role: Reluctant leader
+- Current State: Wounded but resolute
+- Notable Traits: Cautious, principled
+- Inventory:
+  - Broken signet ring
+  - Healing draught (1 remaining)
+- Key Relationships:
+  - Tomas (trusted ally)
+  - Captain Vorn (strained truce)
+
+#### Core Stats
+- HP: 15 / 20
+```
+
+### Minimal Example
+
+```markdown
+## Character Snapshots
+
+### Character: Elara
+Injured during the bridge skirmish, but committed to seeing the party through.
+```
+
+### Linking Example
+
+```markdown
+## Character Snapshots
+
+### Character: Elara
+- Role: Reluctant leader
+- Current State: Wounded but resolute
+- Key Relationships:
+  - Tomas (trusted ally)
+  - Captain Vorn (strained truce)
+
+Character Sheet: Elara_Post_Bridge.CS.md
+```
+
+### Only Character Sheets Example
+```markdown
+## Character Snapshots
+
+### Character Sheets
+- Elara_Post_Bridge.CS.md
+- Captain_Vorn.CS.md
+- Tomas.CS.md
+```
+
+
 
 ```markdown
 ### Trainer: Zeke
@@ -133,7 +216,7 @@ Stat columns (Grit, Resolve, etc.) can be customized to your system.
 
 ## 🔗 Linked Files
 
-SavePoints link to modular companion files using a standardized structure.
+Save Points link to modular companion files using a standardized structure.
 
 | File Type   | Suggested File Name          |
 |-------------|------------------------------|
