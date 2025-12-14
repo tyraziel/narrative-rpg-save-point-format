@@ -109,6 +109,8 @@ If a Character Sheet is linked within an individual character’s subsection, it
 
 The structure of this section is intentionally flexible. Authors MAY include as much or as little detail as is necessary to convey character state.
 
+This section MAY include tabular data to represent character stats, inventory, or other structured information.
+
 ### Character Sheets Subsection
 
 Alternatively, Character Sheets MAY be listed collectively under a `### Character Sheets` subsection.
