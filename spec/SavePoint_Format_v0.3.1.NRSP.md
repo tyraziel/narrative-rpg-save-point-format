@@ -1,8 +1,8 @@
-# SavePoint_Format_v0_3.NRSP.md
+# SavePoint_Format_v0_3.1.NRSP.md
 
-**Narrative RPG Save Point Format – Specification v0.3**
+**Narrative RPG Save Point Format – Specification v0.3.1**
 
-Version 0.3 introduces a fully modular, bundle-ready SavePoint format, designed to store not only narrative state but also timeline metadata, character sheets, team info, and related files. This version supersedes `.NRSF.md` and defines `.NRSP.md` as the canonical extension.
+Version 0.3.1 introduces a fully modular, bundle-ready SavePoint format, designed to store not only narrative state but also timeline metadata, character sheets, team info, and related files. This version defines `.NRSP.md` as the canonical extension.
 
 ---
 
@@ -11,15 +11,15 @@ Version 0.3 introduces a fully modular, bundle-ready SavePoint format, designed 
 Each `.NRSP.md` SavePoint begins with a set of YAML-style key-value pairs:
 
 ```markdown
-Title: Emberwood Mystery
+Title: [The Title of the Campaign/Story/Session/etc]
 PreviousArc: null
-NextArc: TrialOfMemories.NRSP.md
+NextArc: [NameOfFile].NRSP.md
 AlternateNext:
-  - EmberFestivalAlt.NRSP.md
+  - [NameOfAltFile].NRSP.md
 TimelineType: Mainline
-ArcID: EW01
-TimelineNote: First successful trust trial with a Legendary
-SLD: EmberwoodMystery.SLD.md
+ArcID: [Unique ID for the Story Arc within the Campaign/Story/Session/etc]
+TimelineNote: [Most Important Note or Summary]
+SLD: [Session Log Document Name].SLD.md
 ```
 
 ### Field Breakdown
@@ -111,4 +111,31 @@ SavePoints link to modular companion files using a standardized structure.
 
 ---
 
-This file format reflects the full modular vision of NRSP v0.3. Everything can be in one file — or split as needed.
+This file format reflects the full modular vision of NRSP v0.3.1. Everything can be in one file, or split as needed.
+
+## Session Log Document (SLD)
+
+An SLD (.SLD.md) is the detailed, chronological record of what happened during play.
+
+Think of the SLD as the: transcript, play notes, rolls, dialogue, decisions, moment-to-moment events.
+
+### How the SLD relates to the NRSP:
+- SLD = "What Happened"
+- NRSP = "What matters going forward"
+
+The NRSP might refer to an SLD, but is not a replacement for the SLD.
+
+Typical relationship:
+
+You play a session → notes/transcript go into an SLD
+At a natural break (arc end, major decision) → you create an NRSP SavePoint
+The SavePoint links to the SLD for full detail, but only carries distilled state
+
+Why this separation matters:
+
+Keeps SavePoints concise and reloadable
+Prevents token bloat
+Preserves full history without forcing it into context
+
+Mirrors code:
+SLD = commit history, NRSP = tagged release
