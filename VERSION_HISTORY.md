@@ -5,6 +5,9 @@ This document outlines the official version history of the Narrative RPG Save Po
 ---
 
 ## v0.3 – Modular SaveFile Format (2025-03-27)
+
+Version 0.3 introduces a fully modular, bundle-ready SavePoint format, designed to store not only narrative state but also timeline metadata, character sheets, team info, and related files. This version supersedes .NRSF.md and defines .NRSP.md as the canonical extension.
+
 - Finalized `.NRSP.md` as the canonical file extension (deprecated `.NRSF.md`)
 - Formalized modular file types: `.NRSP.md`, `.SLD.md`, `.CS.md`, `.T.md`, `.NPC.md`
 - Unified SavePoint structure with metadata, player character state, party, NPCs, towns, and linked file references
