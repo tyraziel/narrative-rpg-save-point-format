@@ -172,6 +172,12 @@ Character Sheet: Elara_Post_Bridge.CS.md
 ```
 
 
+
+
+# SPEC UPDATES STOP HERE, THE BELOW HAS NOT BEEN UPDATED YET!
+
+
+
 ### LEGACY EXAMPLES
 ```markdown
 ### Trainer: Zeke
