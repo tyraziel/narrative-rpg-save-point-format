@@ -126,7 +126,7 @@ This allows NRSP to serve as a *narrative retrieval layer* — offering long-ter
 
 ## 🧑‍💻 [License](LICENSE.md)
 
-**Narrative RPG Save Point Format (NRSP) © 2025 – CC BY 4.0**  
+**Narrative RPG Save Point Format (NRSP) © 2025 – [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) and [VCL-0.1-Experimental](https://github.com/tyraziel/vibe-coder-license/blob/7929e807f1f3954ada55c6596b436e92ad6701ab/README.md)**  
 **Andrew Potozniak (Tyraziel)** – *Visionary Player and Lead Designer*  
 Co-created and in collaboration with **ChatGPT (OpenAI)** – *AI contributor and system design assistant*
 
