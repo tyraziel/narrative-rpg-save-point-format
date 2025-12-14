@@ -94,7 +94,7 @@ Captures the state of characters at this Save Point.
 
 This section MAY include player characters, companions, recurring NPCs, or other entities.
 
-### Character Subsection (Concept)
+### Character Subsection
 
 Character Snapshots MAY serve as the complete representation of a character if the author chooses not to maintain separate Character Sheet files.
 
@@ -109,11 +109,9 @@ If a Character Sheet is linked within an individual character’s subsection, it
 
 The structure of this section is intentionally flexible. Authors MAY include as much or as little detail as is necessary to convey character state.
 
-### Character Sheets Subsection (Concept)
+### Character Sheets Subsection
 
 Alternatively, Character Sheets MAY be listed collectively under a `### Character Sheets` subsection.
-
-
 
 ### Example
 
@@ -133,6 +131,10 @@ Alternatively, Character Sheets MAY be listed collectively under a `### Characte
 
 #### Core Stats
 - HP: 15 / 20
+
+### Character Sheets
+- Captain_Vorn.CS.md
+- Tomas.CS.md
 ```
 
 ### Minimal Example
