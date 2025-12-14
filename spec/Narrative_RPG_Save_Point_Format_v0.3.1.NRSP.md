@@ -1,39 +1,86 @@
-# SavePoint_Format_v0_3.1.NRSP.md
+# Narrative_RPG_Save_Point_Format_v0.3.1.NRSP.md
 
 **Narrative RPG Save Point Format – Specification v0.3.1**
 
-Version 0.3.1 introduces a fully modular, bundle-ready SavePoint format, designed to store not only narrative state but also timeline metadata, character sheets, team info, and related files. This version defines `.NRSP.md` as the canonical extension.
+The Narrative RPG Save Point Format (NRSP) defines a deterministic representation of a narrative state that can be reloaded to continue a story.
 
 ---
 
-## 💾 Header Metadata (Frontmatter)
+## 💾 Header Metadata in YAML
 
-Each `.NRSP.md` SavePoint begins with a set of YAML-style key-value pairs:
-
-```markdown
-Title: [The Title of the Campaign/Story/Session/etc]
-PreviousArc: null
-NextArc: [NameOfFile].NRSP.md
-AlternateNext:
-  - [NameOfAltFile].NRSP.md
-TimelineType: Mainline
-ArcID: [Unique ID for the Story Arc within the Campaign/Story/Session/etc]
-TimelineNote: [Most Important Note or Summary]
-SLD: [Session Log Document Name].SLD.md
-```
-
-### Field Breakdown
+Each `.NRSP.md` Save Point begins with a YAML frontmatter block that defines its identity and position within a narrative timeline.
 
 | Field         | Required | Description |
 |---------------|----------|-------------|
-| Title         | ✅        | Human-readable name of the arc or session |
-| PreviousArc   | ❌        | Filename of the prior SavePoint |
-| NextArc       | ❌        | Filename of the next SavePoint |
-| AlternateNext | ❌        | List of alternate or forked SavePoints |
-| TimelineType  | ❌        | Mainline (default), Branch, or WhatIf |
-| ArcID         | ❌        | Optional unique arc identifier |
-| TimelineNote  | ❌        | Freeform note about story context |
-| SLD           | ❌        | Session Log Document filename (if used) |
+| Title         | ✅        | Human-readable name of the Save Point |
+| PreviousSavePoint | ❌   | Optional filename of the immediately preceding Save Point |
+| NextSavePoint     | ❌   | Optional filename of the subsequent Save Point |
+| AlternateNext     | ❌   | Optional list of filenames representing alternate or forked next Save Points |
+| TimelineType  | ❌        | Optional One of: `Mainline`, `Branch`, or `WhatIf` (defaults to `Mainline`) |
+| ArcID         | ❌        | Optional identifier for the Save Point within a campaign or story |
+| TimelineNote  | ❌        | Optional note describing timeline context or significance |
+| SLD           | ❌        | Optional filename of an associated Session Log Document |
+
+Field order is not significant; however, the ordering above is recommended for readability.
+
+### Example
+
+```markdown
+---
+Title: The Conflict at the Broken Bridge
+PreviousSavePoint: ArrivalAtGreyford.NRSP.md
+NextSavePoint: CrossingTheRavine.NRSP.md
+AlternateNext:
+  - RetreatToTown.NRSP.md
+  - NegotiateWithBandits.NRSP.md
+TimelineType: Mainline
+ArcID: GB-02
+TimelineNote: First major player choice affecting regional control
+SLD: Session_2025-03-14.SLD.md
+---
+```
+
+### Minimal Example
+
+```markdown
+---
+Title: The Conflict at the Broken Bridge
+---
+```
+
+---
+
+## 🗓 Narrative Context
+
+The Narrative Context captures the distilled story state at this Save Point.
+
+This section summarizes what matters going forward, such as major outcomes, unresolved threads, emotional shifts, and narrative consequences. It is intentionally concise and does not attempt to record everything that occurred during play.
+
+Detailed moment-to-moment events, dialogue, and rolls SHOULD be captured in the associated Session Log Document (if present).
+
+The structure of this section is intentionally flexible. Authors MAY use headings, bullet points, or prose as appropriate for their story.
+
+### Example
+
+```markdown
+## Narrative Context
+
+### Summary
+The party confronted bandits controlling the Broken Bridge. After a tense standoff, negotiations failed and violence erupted. Control of the crossing is now uncertain, and word of the conflict is spreading to nearby settlements.
+
+### Notable Moments
+- The bridge captain was defeated but not killed
+- One party member spared a fleeing bandit
+- The bridge structure was damaged during the fight
+```
+
+### Minimal Example
+
+```markdown
+## Narrative Context
+
+The party reached the Broken Bridge and learned it is controlled by hostile forces.
+```
 
 ---
 
@@ -82,20 +129,7 @@ Stat columns (Grit, Resolve, etc.) can be customized to your system.
 
 ---
 
-## 🗓 Narrative Context
 
-```markdown
-### Summary:
-Zeke has just won the Ember Cup. Trust with Suicune is established. Zapdos rumors begin.
-
-### Notable Moments:
-- Spark Cutter with Emberheart
-- Blaze Bomb aerial KO
-- Fastball Special → Blaze
-- Suicune's test of stillness
-```
-
----
 
 ## 🔗 Linked Files
 
