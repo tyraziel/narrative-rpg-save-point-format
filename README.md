@@ -2,7 +2,7 @@
 
 The **Narrative RPG Save Point Format (NRSP)** is a modular, markdown-based format designed to capture the state of a tabletop roleplaying story at any moment — like a save point in a story engine with long-term memory built in.
 
-It preserves not only characters, stats, and inventory; but the emotional, narrative, and contextual state of the story across sessions and arcs.
+It preserves not only characters, stats, and inventory, but the emotional, narrative, and contextual state of the story across sessions and arcs.
 
 ---
 
@@ -57,7 +57,7 @@ The **Narrative RPG Save Point Format (NRSP)** is built around the following pri
   NRSP gives creators and AI systems deterministic memory access, enabling long-form generation without relying on fuzzy embeddings or arbitrary chunking. It's retrieval-augmented generation, structured for storytellers.
 
 - **Visible Memory System**
-  The entire NRSP speicifcation is open and available, no guess work, no black box.
+  The entire NRSP specification is open and available, no guesswork, no black box.
 
 ---
 
@@ -71,7 +71,7 @@ NRSP uses a modular file structure where each file type serves a specific narrat
 | Session Log Document         | `.SLD.md`  | Optional in- or out-of-world transcript of play notes, rolls, dialogue, decisions, moment-to-moment events of what occurred |
 | Character Sheet              | `.CS.md`   | Represents a player character, companion creature, non-player character, or other entity in the narrative                   |
 | Town                         | `.T.md`    | Details about a location, town, city, hub, or region                                                                        |
-| Non-Player Character         | `.NPC.md`  | Details beyond the Character Sheet for an individual non-player characters, often referenced in Save Points or Towns        |
+| Non-Player Character         | `.NPC.md`  | Extended details for an individual non-player character, often referenced in Save Points or Towns                           |
 
 All files follow the format: `Name.Type.md`  
 Example: `Zeke.CS.md`, `Arc1.SLD.md`, `Bramblebend.T.md`
@@ -126,7 +126,7 @@ This allows NRSP to serve as a *narrative retrieval layer* — offering long-ter
 
 ## 🧑‍💻 [License](LICENSE.md)
 
-**Narrative RPG Save Point Format (NRSP) © 2025 – [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) and [VCL-0.1-Experimental](https://github.com/tyraziel/vibe-coder-license/blob/7929e807f1f3954ada55c6596b436e92ad6701ab/README.md)**  
+**Narrative RPG Save Point Format (NRSP) © 2025 – [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**  
 **Andrew Potozniak (Tyraziel)** – *Visionary Player and Lead Designer*  
 Co-created and in collaboration with **ChatGPT (OpenAI)** – *AI contributor and system design assistant*
 
