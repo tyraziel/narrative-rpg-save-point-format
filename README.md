@@ -82,12 +82,12 @@ This structure keeps each file focused and swappable, while supporting bundled s
 
 ## 🎮 Use Case Example
 
-You're playing a custom Pokémon RPG with a character named Zeke. After each major story arc, you create a `.NRSP.md` file that:
+You're playing an RPG with a character named Zeke. After each major story arc, you create a `MyFirstSavePoint.NRSP.md` file that:
 
 - Describes what happened in the story
-- Lists important characters and Pokémon
+- Lists important characters, companion characters, and NPCs
 - Notes key decisions made and items gained
-- Links to related files like `Zeke.CS.md`, `Spark.CS.md`, or `Bramblebend.T.md`
+- Links to related files like `Zeke.CS.md`, `Sparks.CS.md`, `Bramblebend.T.md`, and/or `MyFirstTranscript.SLD.md`
 
 ---
 
