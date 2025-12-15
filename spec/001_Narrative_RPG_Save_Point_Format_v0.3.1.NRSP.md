@@ -122,16 +122,22 @@ Alternatively, Character Sheets MAY be listed collectively under a `### Characte
 
 ### Character: Elara
 - Role: Reluctant leader
+- Level: 3
 - Current State: Wounded but resolute
 - Notable Traits: Cautious, principled
 - Inventory:
   - Broken signet ring
   - Healing draught (1 remaining)
+  - The Black Thorn
 - Key Relationships:
   - Tomas (trusted ally)
   - Captain Vorn (strained truce)
 
 #### Core Stats
+- WITS: 16
+- LUCK: 14
+- RESOLVE: 17
+- EMPATHY: 11
 - HP: 15 / 20
 
 ### Character Sheets
@@ -173,52 +179,41 @@ Character Sheet: Elara_Post_Bridge.CS.md
 - Tomas.CS.md
 ```
 
-
-
-
-# SPEC UPDATES STOP HERE, THE BELOW HAS NOT BEEN UPDATED YET!
-
-
-
-### LEGACY EXAMPLES
-```markdown
-### Trainer: Zeke
-- Role: Wildcard Wrestler
-- Trait Focus: Grit / Chaos
-- Notable Personality: Impulsive, showy, loyal to team
-- Inventory:
-  - Emberheart (intact)
-  - Poké Balls ×3
-  - Custom sunglasses (from Suds)
-- Key Bonds:
-  - Spark (Ride-or-die)
-  - Blaze (Trusted protector)
-  - Suds (Snack-stick MVP)
-
-#### Core Stats
-- Grit: 4
-- Resolve: 2
-- Empathy: 2
-- Smarts: 1
-- Command: 3
-- HP (optional): 5
-```
-
 ---
 
-## Party State
+## 🧑‍🤝‍🧑 Party State
 
-Use a table to summarize active and benched party members, including traits and key moves.
+The Party State provides a consolidated, situational view of the active group at this Save Point.
+
+Party State is OPTIONAL and MAY be omitted if the Character Snapshots sufficiently describe the current group state.
+
+This section summarizes which characters are currently active, or otherwise unavailable, and captures group-level or comparative information relevant to the immediate narrative or gameplay context.
+
+Party State is intentionally ephemeral and may change frequently between Save Points. It does not replace Character Snapshots or Character Sheets.
+
+This section MAY include tabular data to represent comparative or group-scoped information such as party composition, readiness, formation, temporary conditions, or system-specific stats.
+
+### Example
 
 ```markdown
-| Name     | Role             | Trait       | Signature Move         | G | R | E | S | HP | Bond Level | Notes                       |
-|----------|------------------|-------------|-------------------------|---|---|---|---|----|-------------|-----------------------------|
-| Spark    | Ride-or-die      | Echo Bond   | Electro Dash           | 4 | 2 | 2 | 3 | 2  | Core + Echo | Spark Cutter originator     |
-| Blaze    | Protector        | Blaze Bomb  | White Flame Blaze Bomb | 3 | 3 | 2 | 4 | 2  | Core        | Arsonist and volleyballer   |
-| Suds     | Comic Relief     | Fastball    | Stick Slam Combo       | 3 | 2 | 5 | 2 | 5  | Core        | Noodle champ                |
+## Party State
+
+Elara and Tomas are traveling together under strain.
+
+| Name   | Status   | Role in Party       | Condition              | Key Notes                                   |
+|--------|----------|---------------------|------------------------|---------------------------------------------|
+| Elara  | Active   | Reluctant Leader    | Wounded but resolute   | Carrying The Black Thorn; morale holding    |
+| Tomas  | Active   | Trusted Ally        | Uninjured              | Defers to Elara’s judgment                  |
+| Vorn   | Adjacent | Uneasy Associate    | Physically fit         | Truce in effect; trust remains fragile      |
 ```
 
-Stat columns (Grit, Resolve, etc.) can be customized to your system.
+### Minimal Example
+
+```markdown
+## Party State
+
+Elara and Tomas are traveling together under strain. Captain Vorn remains nearby under a fragile truce.
+```
 
 ---
 
@@ -232,7 +227,6 @@ Save Points link to modular companion files using a standardized structure.
 |-------------|------------------------------|
 | Session Log | EmberwoodMystery.SLD.md      |
 | Trainer     | Zeke.CS.md                   |
-| Pokémon     | Spark.CS.md, Blaze.CS.md     |
 | Town Sheet  | Bramblebend.T.md             |
 | NPCs        | Reina.NPC.md, Milo.NPC.md    |
 
