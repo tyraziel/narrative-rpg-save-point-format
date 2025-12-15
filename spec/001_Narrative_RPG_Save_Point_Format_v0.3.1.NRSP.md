@@ -8,6 +8,8 @@ NRSP files are organized into named sections using Markdown headers. Section hea
 
 Subheadings within sections are optional unless otherwise specified.
 
+This file format reflects the full modular vision of NRSP v0.3.1. Everything can be in one file, or split as needed.
+
 ---
 
 ## 💾 Header Metadata in YAML
@@ -221,7 +223,7 @@ Elara and Tomas are traveling together under strain. Captain Vorn remains nearby
 
 Captures the state of locations at this Save Point.
 
-This section MAY include towns, regions, planes, galaxies, worlds, or other locations.
+This section MAY include towns, cities, hubs, regions, planes, galaxies, worlds, or other locations.
 
 ### Location Subsection
 
@@ -258,7 +260,7 @@ Save Points link to modular companion files using a standardized structure.
 
 ---
 
-This file format reflects the full modular vision of NRSP v0.3.1. Everything can be in one file, or split as needed.
+
 
 ## Session Log Document (SLD)
 
