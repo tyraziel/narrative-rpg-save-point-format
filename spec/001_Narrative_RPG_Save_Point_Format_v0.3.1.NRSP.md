@@ -117,6 +117,25 @@ This section MAY include tabular data to represent character stats, inventory, o
 
 Alternatively, Character Sheets MAY be listed collectively under a `### Character Sheets` subsection.
 
+### NPC Sheet concept (no new section required)
+
+Some characters MAY have an associated NPC Sheet (.NPC.md) containing extended or restricted details (e.g., secrets, hidden motives, future plot hooks, GM-only context).
+
+NPC Sheets SHOULD NOT duplicate publicly observable details already present in the Character Sheet, except where repetition improves retrieval or reduces ambiguity.
+
+NPC Sheet files (.NPC.md) MAY be linked from a character’s subsection.
+
+If present, the link MUST be labeled in the form:
+NPC Sheet: [Name].NPC.md
+
+A character MAY link to both a Character Sheet and an NPC Sheet. In that case:
+
+.CS.md is the shared/public-facing representation of the character.
+
+.NPC.md is the extended/GM-orchestrator representation.
+
+Alternatively, NPC Character Sheets MAY be listed collectively under a `### Character Sheets` subsection.
+
 ### Example
 
 ```markdown
@@ -178,6 +197,30 @@ Character Sheet: Elara_Post_Bridge.CS.md
 ### Character Sheets
 - Elara_Post_Bridge.CS.md
 - Captain_Vorn.CS.md
+- Tomas.CS.md
+```
+
+### NPC Character Sheet Example
+
+```markdown
+## Character Snapshots
+
+### Character: Captain Vorn
+- Current State: Cooperative, but calculating
+- Visible Disposition: Cold professionalism
+
+Character Sheet: Captain_Vorn.CS.md
+NPC Sheet: Captain_Vorn.NPC.md
+```
+
+### Only Character Sheets and NPCs Example
+```markdown
+## Character Snapshots
+
+### Character Sheets
+- Elara_Post_Bridge.CS.md
+- Captain_Vorn.CS.md
+- Captain_Vorn.NPC.md
 - Tomas.CS.md
 ```
 
