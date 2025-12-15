@@ -375,8 +375,136 @@ Linked Files is intended for:
 
 ---
 
-## NSRP Example
+## NRSP Example
 
 ```markdown
+---
+Title: The Day the Gears Fell Silent
+PreviousSavePoint: Arrival_At_FortTier.NRSP.md
+NextSavePoint: The_Final_Torse.NRSP.md
+AlternateNext:
+  - Sabotage_At_Dawn.NRSP.md
+  - Flight_From_The_Tier.NRSP.md
+TimelineType: Mainline
+ArcID: FT-07
+TimelineNote: The Torse Championship begins as political tensions surface beneath FortTier.
+SLD: Session_2025-09-18.SLD.md
+---
 
+## 🗓 Narrative Context
+
+### Summary
+FortTier stands at full steam as the Grand Torse Championship begins. Crowds flood the iron terraces, gearworks hum at maximum output, and banners of rival houses hang uneasily beside one another. While the city celebrates, fractures beneath the surface widen.
+
+The party has arrived as honored guests of House Calder, but evidence suggests the final Torse match may be used as cover for a coordinated act of sabotage aimed at the city’s core pressure engine.
+
+Victory in the arena could grant the party influence and access. Failure—or exposure—could plunge FortTier into chaos.
+
+### Unresolved Threads
+- The origin of the altered Torse field schematics remains unknown
+- House Calder’s true involvement is unclear
+- A pressure spike has been detected beneath the Grand Tier
+
+---
+
+## 🧑‍🎤 Character Snapshots
+
+### Character: Elara Vance
+- Role: Field Captain and Strategist
+- Level: 5
+- Current State: Focused, burdened by expectation
+- Notable Traits: Tactical, principled, relentless
+- Inventory:
+  - Steam-etched Signet of FortTier
+  - Reinforced Torse Gauntlet
+  - Personal Chronometer (damaged)
+- Key Relationships:
+  - Korrin Hale (trusted teammate)
+  - Magistrate Calder (political patron)
+
+#### Core Stats
+| Stat      | Value |
+|-----------|-------|
+| WITS     | 17    |
+| RESOLVE  | 18    |
+| AGILITY  | 14    |
+| EMPATHY  | 12    |
+| HP       | 28 / 32 |
+
+Character Sheet: Elara_Vance.CS.md
+
+---
+
+### Character: Korrin Hale
+- Role: Power Striker
+- Level: 5
+- Current State: Energized, masking nerves
+- Notable Traits: Bold, loyal, impulsive
+- Inventory:
+  - Pneumatic Torse Harness
+  - Shock-lined Greaves
+- Key Relationships:
+  - Elara Vance (team captain)
+  - Ressa Quill (rival striker)
+
+Character Sheet: Korrin_Hale.CS.md
+
+---
+
+### Character: Magistrate Aldric Calder
+- Current State: Publicly supportive, privately guarded
+- Visible Disposition: Measured confidence
+
+Character Sheet: Aldric_Calder.CS.md  
+NPC Sheet: Aldric_Calder.NPC.md
+
+---
+
+## 🧑‍🤝‍🧑 Party State
+
+The team is registered for the Torse semifinals and operating under public scrutiny.
+
+| Name   | Status | Party Role        | Condition            | Key Notes                                      |
+|--------|--------|-------------------|----------------------|------------------------------------------------|
+| Elara  | Active | Team Captain      | Focused              | Tactical control of the field                  |
+| Korrin | Active | Primary Striker   | Adrenalized          | Overclocked harness (temporary boost)          |
+| Calder | Adj.   | Political Sponsor | Uninjured            | Influence may shield the party if leveraged    |
+
+---
+
+## 🗺️ Location Snapshots
+
+### Location: FortTier
+- Type: Vertical industrial city-fortress
+- Current State: Operational at peak capacity
+- Population: ~80,000
+- Control: Council of Houses
+- Threat Level: Rising
+
+#### Notable Features
+- The Grand Tier (central arena and civic hub)
+- Steam Spine Elevators
+- Core Pressure Engine (restricted)
+
+#### Torse Infrastructure
+| Facility              | Status     | Notes                                              |
+|-----------------------|------------|----------------------------------------------------|
+| Grand Torse Arena     | Active     | Modified field layout detected                     |
+| Training Annex        | Restricted | Guarded by House Calder sentries                   |
+| Gearworks Sublevel C  | Unstable   | Pressure readings exceeding safe thresholds        |
+
+Location Sheet: FortTier.L.md
+
+---
+
+## 🔗 Linked Files
+
+| File                          | Purpose                                      |
+|-------------------------------|----------------------------------------------|
+| Torse_Rules_Standard.md       | Official Torse match regulations             |
+| FortTier_Political_Map.md    | Power blocs within the Council of Houses     |
+| House_Calder_Overview.md     | Background and known alliances               |
+| Pressure_Engine_Schematic.png| Partial diagram recovered by the party       |
+
+---
 ```
