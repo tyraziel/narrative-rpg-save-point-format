@@ -1,6 +1,6 @@
-# Narrative_RPG_Save_Point_Format_v0.3.1.NRSP.md
+# Narrative_RPG_Save_Point_Format_v0.4.0.NRSP.md
 
-**Narrative RPG Save Point Format – Specification v0.3.1**
+**Narrative RPG Save Point Format – Specification v0.4.0**
 
 The Narrative RPG Save Point Format (NRSP) defines a deterministic representation of a narrative state that can be reloaded to continue a story.
 
@@ -8,7 +8,7 @@ NRSP files are organized into named sections using Markdown headers. Section hea
 
 Subheadings within sections are optional unless otherwise specified.
 
-This file format reflects the full modular vision of NRSP v0.3.1. Everything can be in one file, or split as needed.
+This file format reflects the full modular vision of NRSP v0.4.0. Everything can be in one file, or split as needed.
 
 ---
 
@@ -289,22 +289,88 @@ This section MAY include tabular data to represent shops, taverns, governmental 
 
 Alternatively, Location Sheets MAY be listed collectively under a `### Location Sheets` subsection.
 
-
-## 🔗 Linked Files
-
-Linked Files is an OPTIONAL section and MAY serve as an additional section with a tabular format containing additional files not referenced elsewhere in the NSRP.
-
 ### Example
 
 ```markdown
+## Location Snapshots
 
-## Linked Files
+### Location: Bramblebend
+- Type: Riverside town
+- Current State: Partially destroyed
+- Population: ~50 (down from ~150)
+- Threat Level: Unstable
+- Control: No active authority
 
-| File        | Notes                        |
-|-------------|------------------------------|
-| TBD         | TBD                          |
+#### Notable Features
+- The Iron Bridge (50% structural integrity)
+- Burned North Gate
+- Abandoned marketplace
+
+#### Points of Interest
+| Location        | Status        | Notes                                     |
+|-----------------|---------------|-------------------------------------------|
+| The Lazy Dragon | Closed        | Safe for rest, no services                |
+| Blacksmith     | Abandoned     | Forge still warm; owner missing           |
+| River Docks    | Damaged       | Unsafe for cargo transport                |
+```
+
+### Minimal Example
+
+```markdown
+## Location Snapshots
+
+### Location: Bramblebend
+A damaged bridge town struggling to recover after recent violence.
+```
+
+### Linked Location Sheet Example
+
+```markdown
+## Location Snapshots
+
+### Location: Bramblebend
+- Current State: Half-ruined, fearful
+- Control: Power vacuum
+
+Location Sheet: Bramblebend.L.md
+```
+
+### Location Sheets Only Example
+```mardown
+## Location Snapshots
+
+### Location Sheets
+- Bramblebend.L.md
+- Grey_Marches.L.md
 ```
 
 ---
 
+## 🔗 Linked Files
 
+Linked Files is an OPTIONAL section that provides a consolidated index of relevant files that are not semantically owned by another section.
+
+This section SHOULD NOT duplicate links already present in Character Snapshots, Location Snapshots, or Header Metadata unless repetition improves discoverability.
+
+Linked Files is intended for:
+- Reference material
+- World rules
+- Artifacts
+- External documents
+- System notes
+
+
+### Example
+
+```markdown
+## Linked Files
+
+| File                         | Purpose                                      |
+|------------------------------|----------------------------------------------|
+| World_Rules_v1.md            | Core setting rules                           |
+| Faction_Overview.md          | Political groups active in the region        |
+| Map_Grey_Marches.png         | Regional map reference                       |
+| Prophecy_Of_The_Thorn.md     | Lore document referenced indirectly          |
+```
+
+---
