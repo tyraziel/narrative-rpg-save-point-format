@@ -103,7 +103,7 @@ You're playing an RPG with a character named Zeke. After each major story arc, y
 
 This repository includes:
 
-- ✅ [spec/SavePoint_Format_v0.3.1.NRSP.md](./spec/SavePoint_Format_v0.3.1.NRSP.md) – The latest modular SaveFile spec (timeline, character, party, links)  
+- ✅ [spec/SavePoint_Format_v0.4.0.NRSP.md](./spec/SavePoint_Format_v0.4.0.NRSP.md) – The latest modular SaveFile spec (timeline, character, party, links)  
 - 📄 `LICENSE.md` – Creative Commons Attribution 4.0 License (CC BY 4.0)  
 
 ---
