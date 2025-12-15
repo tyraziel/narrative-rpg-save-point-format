@@ -217,6 +217,32 @@ Elara and Tomas are traveling together under strain. Captain Vorn remains nearby
 
 ---
 
+## 🗺️ Location Snapshots
+
+Captures the state of locations at this Save Point.
+
+This section MAY include towns, regions, planes, galaxies, worlds, or other locations.
+
+### Location Subsection
+
+Location Snapshots MAY serve as the complete representation of a location if the author chooses not to maintain separate Location files.
+
+Each Location defined in this section MUST start with a subsection in the form:
+`### Location: [Name]`
+
+This requirement does not apply when Locations are listed exclusively under a
+`### Location Sheets` subsection.
+
+If a Location Sheet is linked within an individual location’s subsection, it MUST be labeled in the form:
+`Location Sheet: [Name].L.md`
+
+The structure of this section is intentionally flexible. Authors MAY include as much or as little detail as is necessary to convey location information and state.
+
+This section MAY include tabular data to represent shops, taverns, governmental hierarchy, or other structured information.
+
+### Location Sheets Subsection
+
+Alternatively, Location Sheets MAY be listed collectively under a `### Location Sheets` subsection.
 
 
 ## 🔗 Linked Files
