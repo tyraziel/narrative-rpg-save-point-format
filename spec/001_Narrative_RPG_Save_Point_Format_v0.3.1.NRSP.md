@@ -302,13 +302,9 @@ Linked Files is an OPTIONAL section and MAY serve as an additional section with 
 
 | File        | Notes                        |
 |-------------|------------------------------|
-| Session Log | EmberwoodMystery.SLD.md      |
-| Trainer     | Zeke.CS.md                   |
-| Town Sheet  | Bramblebend.T.md             |
-| NPCs        | Reina.NPC.md, Milo.NPC.md    |
+| TBD         | TBD                          |
 ```
 
 ---
-
 
 
