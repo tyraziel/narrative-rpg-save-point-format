@@ -22,7 +22,11 @@ Each `.SLD.md` Session Log Document MUST begin with a YAML frontmatter block tha
 | Field         | Required | Description |
 |---------------|----------|-------------|
 | SessionLogTitle         | ✅       | Human-readable name of the Session Log Document |
-| SavePoint     | ✅       | The filename of the Save Point the Session Log Document is a part of |
+| SavePoint       | ✅       | The filename of the Save Point the Session Log Document is a part of |
+| InGameDate     | ❌      | Optional in game date/time of the session |
+| SessionDate     | ❌      | Optional real date/time of the session |
+| SessionDuration | ❌      | Optional the duration of the session |
+| SessionNumber   | ❌      | Optional the session number |
 
 Field order is not significant; however, the ordering above is recommended for readability.
 
@@ -32,6 +36,10 @@ Field order is not significant; however, the ordering above is recommended for r
 ---
 SessionLogTitle: The Conflict at the Broken Bridge
 SavePoint: TheConflictattheBrokenBridge.NRSP.md
+InGameDate: 12th Day of Highsummer, Year 403
+SessionDate: 2025-03-14
+SessionDuration: 3h 45m
+SessionNumber: 17
 ---
 ```
 
