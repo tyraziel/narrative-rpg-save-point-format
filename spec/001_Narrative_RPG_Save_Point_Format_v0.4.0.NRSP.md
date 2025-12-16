@@ -14,7 +14,7 @@ This file format reflects the full modular vision of NRSP v0.4.0. Everything can
 
 ## 💾 Header Metadata in YAML
 
-Each `.NRSP.md` Save Point begins with a YAML frontmatter block that defines its identity and position within a narrative timeline.
+Each `.NRSP.md` Save Point MUST begin with a YAML frontmatter block that defines its identity and position within a narrative timeline.
 
 | Field         | Required | Description |
 |---------------|----------|-------------|
