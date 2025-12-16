@@ -7,6 +7,8 @@ An SLD MAY summarize scenes, emotions, or symbolic moments so long as the orderi
 
 SLD files are organized into named sections using Markdown headers.  Section headers define the semantic meaning of the content that follows.  An SLD MAY contain any number of named sections but MUST contain at least one named section to be valid.  An SLD MAY describe events in prose, bullet points, scene blocks, dialogue transcripts, or mixed formats.
 
+Each Session Log Document MUST reference exactly one Save Point.
+
 Subheadings within sections are optional unless otherwise specified.
 
 The SLD sections and subsections are suggestions and MAY be extended by the author.
