@@ -172,6 +172,10 @@ This section MAY be omitted entirely for narrative-focused sessions.
 ---
 SessionLogTitle: The Conflict at the Broken Bridge
 SavePoint: TheConflictattheBrokenBridge.NRSP.md
+InGameDate: 12th Day of Highsummer, Year 403
+SessionDate: 2025-03-14
+SessionDuration: 3h 45m
+SessionNumber: 17
 ---
 
 ## Opening Scene
