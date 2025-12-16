@@ -25,7 +25,7 @@ Each `.NRSP.md` Save Point MUST begin with a YAML frontmatter block that defines
 | TimelineType  | ❌        | Optional One of: `Mainline`, `Branch`, or `WhatIf` (defaults to `Mainline`) |
 | ArcID         | ❌        | Optional identifier for the Save Point within a campaign or story |
 | TimelineNote  | ❌        | Optional note describing timeline context or significance |
-| SLD           | ❌        | Optional filename of an associated Session Log Document |
+| SLD           | ❌        | Optional list of filenames of associated Session Log Documents |
 
 Field order is not significant; however, the ordering above is recommended for readability.
 
@@ -42,7 +42,8 @@ AlternateNext:
 TimelineType: Mainline
 ArcID: GB-02
 TimelineNote: First major player choice affecting regional control
-SLD: Session_2025-03-14.SLD.md
+SLD:
+  - Session_2025-03-14.SLD.md
 ---
 ```
 
@@ -388,7 +389,8 @@ AlternateNext:
 TimelineType: Mainline
 ArcID: FT-07
 TimelineNote: The Torse Championship begins as political tensions surface beneath FortTier.
-SLD: Session_2025-09-18.SLD.md
+SLD:
+  - Session_2025-09-18.SLD.md
 ---
 
 ## 🗓 Narrative Context
