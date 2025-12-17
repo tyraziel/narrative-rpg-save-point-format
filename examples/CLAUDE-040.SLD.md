@@ -2,6 +2,7 @@
 SessionLogTitle: Casino Reconnaissance
 SavePoint: example_Heist_SavePoint.NRSP.md
 ---
+
 ## Opening Scene
 The Jackdaw's airlock cycles open with a hiss, and Nexus Station's recycled air washes over the crew. Beyond the docking bay's reinforced glass, the Azure Nebula paints the void in swirls of electric blue and violet. The station hums with activity—tourists, traders, corporate executives moving through the promenade like schools of fish.
 Zephyr adjusts their designer suit and grins. "Remember: we're rich, bored, and looking for excitement. Let's go lose some money."
