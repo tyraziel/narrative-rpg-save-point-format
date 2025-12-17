@@ -70,8 +70,9 @@ NRSP uses a modular file structure where each file type serves a specific narrat
 | Narrative RPG Save Point     | `.NRSP.md` | Captures a narrative arc, including story summary, character state, and links                                               |
 | Session Log Document         | `.SLD.md`  | Optional in- or out-of-world transcript of play notes, rolls, dialogue, decisions, moment-to-moment events of what occurred |
 | Character Sheet              | `.CS.md`   | Represents a player character, companion creature, non-player character, or other entity in the narrative                    |
-| Location                     | `.L.md`    | Details about a location, town, city, hub, region, plane, galaxy, world                                                        |
-| Non-Player Character         | `.NPC.md`  | Extended details for an individual non-player character, often referenced in Save Points or Locations                         |
+| Location Sheet               | `.LS.md`   | Details about a location, town, city, hub, region, plane, galaxy, world                                                        |
+| Non-Player Character         | `.NPC.md`  | Extended details for an individual non-player character, often referenced in Save Points or Locations (may contain hidden to players information) |
+| Location Game Master Information      | `.LGM.md`  | Extended details for a location, often referenced in Save Points  (may contain hidden to players information) |
 
 All files follow the format: `Name.Type.md`  
 Example: `Zeke.CS.md`, `Arc1.SLD.md`, `Bramblebend.L.md`
@@ -109,7 +110,7 @@ You're playing an RPG with a character named Zeke. After each major story arc, y
 - Describes what happened in the story
 - Lists important characters, companion characters, and NPCs
 - Notes key decisions made and items gained
-- Links to related files like `Zeke.CS.md`, `Sparks.CS.md`, `Bramblebend.L.md`, and/or `MyFirstTranscript.SLD.md`
+- Links to related files like `Zeke.CS.md`, `Sparks.CS.md`, `Bramblebend.LS.md`, and/or `MyFirstTranscript.SLD.md`
 
 ---
 
