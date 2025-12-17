@@ -80,6 +80,28 @@ This structure keeps each file focused and swappable, while supporting bundled s
 
 ---
 
+## Session Log Document (SLD)
+
+An SLD (.SLD.md) is the detailed, chronological record of what happened during play.
+
+The SLD may be the: transcript, play notes, rolls, dialogue, decisions, moment-to-moment events.
+
+### How the SLD relates to the NRSP:
+- SLD = "What Happened"
+- NRSP = "What matters going forward"
+
+The NRSP might refer to an SLD, but is not a replacement for the SLD.
+
+Typical relationship:
+- You play a session → notes/transcript go into an SLD
+- At a natural break (arc end, major decision) → you create an NRSP Save Point
+- The Save Point links to the SLD for full detail, but only carries distilled state
+
+Why this separation matters:
+- Keeps Save Points concise and reloadable
+- Prevents token bloat
+- Preserves full history without forcing it into context
+
 ## 🎮 Use Case Example
 
 You're playing an RPG with a character named Zeke. After each major story arc, you create a `MyFirstSavePoint.NRSP.md` file that:
