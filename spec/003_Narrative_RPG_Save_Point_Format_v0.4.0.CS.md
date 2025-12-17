@@ -28,6 +28,7 @@ Each `.CS.md` Character Sheet MUST begin with a YAML frontmatter block that defi
 |------|----------|-------------|
 | Name | ✅ | Canonical name of the character |
 | Type | ❌ | Optional one of: `PC`, `Companion`, `NPC`, `Entity` (defaults to `PC`) |
+| System | ❌ | Optional mechanical or narrative system used to interpret character data |
 | IntroducedIn | ❌ | Optional filename of the Save Point or Module where the character first appears |
 | CurrentAsOf | ❌ | Optional list of filenames of Save Points for which this Character Sheet is valid |
 | Supersedes | ❌ | Optional filename of a prior Character Sheet this file replaces |

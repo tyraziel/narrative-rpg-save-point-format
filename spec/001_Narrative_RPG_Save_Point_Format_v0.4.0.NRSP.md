@@ -23,6 +23,7 @@ Each `.NRSP.md` Save Point MUST begin with a YAML frontmatter block that defines
 | Field         | Required | Description |
 |---------------|----------|-------------|
 | Title         | ✅        | Human-readable name of the Save Point |
+| System | ❌ | Optional mechanical or narrative system used |
 | PreviousSavePoint | ❌   | Optional filename of the immediately preceding Save Point |
 | NextSavePoint     | ❌   | Optional filename of the subsequent Save Point |
 | AlternateNext     | ❌   | Optional list of filenames representing alternate or forked next Save Points |
