@@ -10,6 +10,8 @@ Subheadings within sections are optional unless otherwise specified.
 
 Emoji used in section headers are OPTIONAL and do not affect semantic meaning or document validity.
 
+Examples intentionally omit emojis to demonstrate minimal, valid syntax.
+
 This file format reflects the full modular vision of NRSP v0.4.0. Everything can be in one file, or split as needed.
 
 ---
