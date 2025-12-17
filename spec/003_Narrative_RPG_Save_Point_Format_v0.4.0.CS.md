@@ -29,7 +29,7 @@ Each `.CS.md` Character Sheet MUST begin with a YAML frontmatter block that defi
 | Name | ✅ | Canonical name of the character |
 | Type | ❌ | Optional one of: `PC`, `Companion`, `NPC`, `Entity` (defaults to `PC`) |
 | IntroducedIn | ❌ | Optional filename of the Save Point or Module where the character first appears |
-| CurrentAsOf | ❌ | Optional list of filenames of the Save Points this Character Sheet reflects |
+| CurrentAsOf | ❌ | Optional list of filenames of Save Points for which this Character Sheet is valid |
 | Supersedes | ❌ | Optional filename of a prior Character Sheet this file replaces |
 | SupersededBy | ❌ | Optional filename of a later Character Sheet that replaces this one |
 | Status | ❌ | Optional narrative status (e.g., `Active`, `Missing`, `Deceased`, `Retired`) |
