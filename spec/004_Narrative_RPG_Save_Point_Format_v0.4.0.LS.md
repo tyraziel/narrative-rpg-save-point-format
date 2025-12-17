@@ -27,14 +27,14 @@ Each `.LS.md` Location MUST begin with a YAML frontmatter block that defines the
 | Field | Required | Description |
 |------|----------|-------------|
 | Name | ✅ | Canonical name of the location |
-| Type | ❌ | Optional one of: `Town`, `Village`, `World`, `Galaxy`, etc (defaults to `Town`) |
+| Type | ❌ | Optional descriptive type (e.g., `Point of Interest`, `Town`, `Village`, `Region`, `Structure`, `World`, `Galaxy`; defaults to `Town`) |
 | GMSheet | ❌ | Optional filename of the LGM.md containing extended or restricted details |
 | System | ❌ | Optional mechanical or narrative system used to interpret location information |
 | IntroducedIn | ❌ | Optional filename of the Save Point or Module where the location first appears |
 | CurrentAsOf | ❌ | Optional list of filenames of Save Points for which this Location Sheet is valid |
 | Supersedes | ❌ | Optional filename of a prior Location Sheet this file replaces |
 | SupersededBy | ❌ | Optional filename of a later Location Sheet that replaces this one |
-| Status | ❌ | Optional narrative status (e.g., `Active`, `Missing`, `Deceased`, `Retired`) |
+| Status | ❌ | Optional narrative status (e.g., `Active`, `Abandoned`, `Destroyed`, `Hideen`, `Inaccessible`) |
 | Tags | ❌ | Optional list of semantic tags for categorization or retrieval |
 
 Field order is not significant; however, the ordering above is recommended for readability.
@@ -42,5 +42,35 @@ Field order is not significant; however, the ordering above is recommended for r
 ### Example
 
 ```markdown
-
+---
+Name: Broken Bridge
+Type: Point of Interest
+IntroducedIn: ArrivalAtGreyford.NRSP.md
+CurrentAsOf:
+  - Conflict_At_The_Broken_Bridge.NRSP.md
+Status: Damaged
+Tags:
+  - Crossing
+  - Strategic
+  - Contested
+---
 ```
+
+### Minimal Example
+```markdown
+---
+Name: Broken Bridge
+---
+```
+
+## ?? Location Sheet Sections
+
+The following sections are recommendations only and are not required for validity.
+
+These sections MAY include tabular data to represent points of interest, governmental hierarchy, or other structured information.
+
+### Location Overview
+
+### Governmental Structure/Hierarchy
+
+### Location Connections
