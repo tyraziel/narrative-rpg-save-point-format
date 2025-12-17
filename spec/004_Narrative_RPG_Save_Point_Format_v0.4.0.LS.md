@@ -22,7 +22,7 @@ This file format reflects the modularity of NRSP v0.4.0 splitting out the Locati
 
 ## 💾 Header Metadata in YAML
 
-Each `.L.md` Location MUST begin with a YAML frontmatter block that defines the location and the Save Points that it is a part of.
+Each `.LS.md` Location MUST begin with a YAML frontmatter block that defines the location and the Save Points that it is a part of.
 
 | Field | Required | Description |
 |------|----------|-------------|
