@@ -11,7 +11,7 @@ Each Session Log Document MUST reference exactly one Save Point.
 
 Subheadings within sections are optional unless otherwise specified.
 
-The SLD sections and subsections are suggestions and MAY be extended by the author.
+The SLD sections and subsections defined here are suggestions and MAY be extended by the author.
 
 This file format reflects the modularity of NRSP v0.4.0 splitting out the Session Log Document.
 
