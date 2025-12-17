@@ -29,6 +29,7 @@ Each `.SLD.md` Session Log Document MUST begin with a YAML frontmatter block tha
 | SessionDate     | ❌      | Optional real date/time of the session |
 | SessionDuration | ❌      | Optional the duration of the session |
 | SessionNumber   | ❌      | Optional the session number |
+| System | ❌ | Optional mechanical or narrative system used |
 | Tags | ❌ | Optional list of semantic tags for categorization or retrieval |
 
 Field order is not significant; however, the ordering above is recommended for readability.
@@ -43,6 +44,10 @@ InGameDate: 12th Day of Highsummer, Year 403
 SessionDate: 2025-03-14
 SessionDuration: 3h 45m
 SessionNumber: 17
+System: d7-RPG
+Tags:
+ - Bridge
+ - Conflict
 ---
 ```
 
@@ -179,6 +184,10 @@ InGameDate: 12th Day of Highsummer, Year 403
 SessionDate: 2025-03-14
 SessionDuration: 3h 45m
 SessionNumber: 17
+System: d7-RPG
+Tags:
+ - Bridge
+ - Conflict
 ---
 
 ## Opening Scene
