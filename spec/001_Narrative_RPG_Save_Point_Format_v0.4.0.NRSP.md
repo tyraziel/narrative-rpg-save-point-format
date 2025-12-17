@@ -8,6 +8,8 @@ NRSP files are organized into named sections using Markdown headers. Section hea
 
 Subheadings within sections are optional unless otherwise specified.
 
+Emoji used in section headers are OPTIONAL and do not affect semantic meaning or document validity.
+
 This file format reflects the full modular vision of NRSP v0.4.0. Everything can be in one file, or split as needed.
 
 ---
@@ -337,12 +339,56 @@ Location Sheet: Bramblebend.L.md
 ```
 
 ### Location Sheets Only Example
-```mardown
+```markdown
 ## Location Snapshots
 
 ### Location Sheets
 - Bramblebend.L.md
 - Grey_Marches.L.md
+```
+
+---
+
+## 📝 Session Log
+
+This section represents an OPTIONAL embedded Session Log and is semantically equivalent to a standalone Session Log Document [.SLD.md](./002_Narrative_RPG_Save_Point_Format_v0.4.0.SLD.md).
+
+If both embedded Session Log content and Session Log Document links are present, the embedded section is the primary source for Session Log information for this Save Point.
+
+Authors SHOULD prefer external .SLD.md files for long or detailed session logs.
+
+Subsections MAY include one or more of the following: Opening Scene, Major Events, Important Interactions, Session Narrative, Legendary Acknowledgments, Closing Image, Detailed Transcript
+
+If no subsections are present, the content under `## Session Log` is assumed to be `### Session Narrative`.
+
+### Example
+
+```markdown
+## Session Log
+
+### Opening Scene
+
+The fog hangs low over the Broken Bridge as the party approaches at dawn. The river below churns loudly, masking distant voices on the far side. Weathered banners hang from the stone pylons, their colors faded by rain and neglect. Even before words are exchanged, it is clear this crossing is not unguarded.
+
+### Session Narrative
+
+What began as a tense standoff quickly spiraled into chaos. The narrow stone span offered little room for maneuvering, and every misstep threatened to send combatants tumbling into the river below. Amid the clash of steel and shouted orders, the party was forced to decide whether control of the crossing was worth the cost in blood.
+
+By the time the fighting ended, the bridge itself bore the scars of the conflict. Trust was broken, alliances strained, and word of the confrontation was already beginning to spread beyond the ravine.
+
+### Closing Image
+
+As night falls, the broken silhouette of the bridge stands stark against the moonlit river. Fires burn on both banks, but no one dares cross. The path forward remains open—but at a cost.
+```
+
+### Minimal Example
+
+```markdown
+## Session Log
+
+What began as a tense standoff quickly spiraled into chaos. The narrow stone span offered little room for maneuvering, and every misstep threatened to send combatants tumbling into the river below. Amid the clash of steel and shouted orders, the party was forced to decide whether control of the crossing was worth the cost in blood.
+
+By the time the fighting ended, the bridge itself bore the scars of the conflict. Trust was broken, alliances strained, and word of the confrontation was already beginning to spread beyond the ravine.
 ```
 
 ---
@@ -393,7 +439,7 @@ SLD:
   - Session_2025-09-18.SLD.md
 ---
 
-## 🗓 Narrative Context
+## Narrative Context
 
 ### Summary
 FortTier stands at full steam as the Grand Torse Championship begins. Crowds flood the iron terraces, gearworks hum at maximum output, and banners of rival houses hang uneasily beside one another. While the city celebrates, fractures beneath the surface widen.
@@ -409,7 +455,7 @@ Victory in the arena could grant the party influence and access. Failure—or ex
 
 ---
 
-## 🧑‍🎤 Character Snapshots
+## Character Snapshots
 
 ### Character: Elara Vance
 - Role: Field Captain and Strategist
@@ -462,7 +508,7 @@ NPC Sheet: Aldric_Calder.NPC.md
 
 ---
 
-## 🧑‍🤝‍🧑 Party State
+## Party State
 
 The team is registered for the Torse semifinals and operating under public scrutiny.
 
@@ -474,7 +520,7 @@ The team is registered for the Torse semifinals and operating under public scrut
 
 ---
 
-## 🗺️ Location Snapshots
+## Location Snapshots
 
 ### Location: FortTier
 - Type: Vertical industrial city-fortress
@@ -499,7 +545,43 @@ Location Sheet: FortTier.L.md
 
 ---
 
-## 🔗 Linked Files
+## Session Log
+
+### Opening Scene
+
+Steam hisses from pressure vents along the Grand Tier as dawn breaks over FortTier. The iron terraces fill with early crowds, banners snapping in the wind as vendors and officials scramble into position. Far below the arena floor, unseen mechanisms churn, their rhythms slightly out of sync with the city’s usual heartbeat.
+
+From their assigned gallery, the party can see the full expanse of the Grand Torse Arena — and the unusually dense guard presence surrounding the restricted access corridors beneath it.
+
+### Major Events
+
+- **Arena Arrival:** The team is formally announced as semifinal contenders, drawing attention from rival houses and the press.
+- **Anomalous Readings:** Elara detects irregular pressure fluctuations during pre-match inspection.
+- **Restricted Access Denied:** Attempts to enter the Gearworks Sublevel are blocked by House Calder sentries citing emergency protocols.
+- **Rival Interference:** Korrin spots Ressa Quill conferring with an unknown engineer near the service lifts.
+- **Pressure Spike:** Sensors register a brief surge from beneath the arena moments before the match begins.
+
+### Important Interactions
+
+- Magistrate Calder publicly reassures the party while privately urging discretion.
+- A junior engineer quietly confirms that the Torse field layout was altered overnight without full council approval.
+- Ressa Quill exchanges a tense glance with Korrin before disappearing into the lower tiers.
+
+### Session Narrative
+
+As the city roars in anticipation of the semifinal match, the party finds itself balancing spectacle and subterfuge. Every cheer from the stands is matched by the hiss of unstable machinery beneath their feet. What should have been a straightforward competition now feels like a distraction — a carefully staged cover for something far more dangerous.
+
+Elara must decide whether to push for influence through victory or risk exposure by pressing deeper into FortTier’s underbelly. Meanwhile, Korrin wrestles with the realization that the match itself may be weaponized against both the team and the city.
+
+### Legendary Acknowledgments
+
+As the Torse field activates, ancient resonance glyphs embedded in the arena walls pulse briefly out of sequence. The phenomenon lasts only a heartbeat, but long enough for those watching closely to sense that FortTier’s foundations are responding to forces beyond politics or sport.
+
+### Closing Image
+
+The match horn sounds and the crowd erupts as the Torse semifinals begin. Above, banners billow proudly in the steam-filled air. Below, unseen pressure continues to build. FortTier celebrates — unaware of how close it stands to catastrophe.
+
+## Linked Files
 
 | File                          | Purpose                                      |
 |-------------------------------|----------------------------------------------|
