@@ -29,6 +29,7 @@ Each `.SLD.md` Session Log Document MUST begin with a YAML frontmatter block tha
 | SessionDate     | ❌      | Optional real date/time of the session |
 | SessionDuration | ❌      | Optional the duration of the session |
 | SessionNumber   | ❌      | Optional the session number |
+| Tags | ❌ | Optional list of semantic tags for categorization or retrieval |
 
 Field order is not significant; however, the ordering above is recommended for readability.
 

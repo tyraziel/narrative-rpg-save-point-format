@@ -30,6 +30,7 @@ Each `.NRSP.md` Save Point MUST begin with a YAML frontmatter block that defines
 | ArcID         | ❌        | Optional identifier for the Save Point within a campaign or story |
 | TimelineNote  | ❌        | Optional note describing timeline context or significance |
 | SLD           | ❌        | Optional list of filenames of associated Session Log Documents |
+| Tags | ❌ | Optional list of semantic tags for categorization or retrieval |
 
 Field order is not significant; however, the ordering above is recommended for readability.
 
