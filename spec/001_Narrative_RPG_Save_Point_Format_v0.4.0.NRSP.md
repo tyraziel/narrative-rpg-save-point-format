@@ -286,7 +286,7 @@ This requirement does not apply when Locations are listed exclusively under a
 `### Location Sheets` subsection.
 
 If a Location Sheet is linked within an individual location’s subsection, it MUST be labeled in the form:
-`Location Sheet: [Name].L.md`
+`Location Sheet: [Name].LS.md`
 
 The structure of this section is intentionally flexible. Authors MAY include as much or as little detail as is necessary to convey location information and state.
 
@@ -339,7 +339,7 @@ A damaged bridge town struggling to recover after recent violence.
 - Current State: Half-ruined, fearful
 - Control: Power vacuum
 
-Location Sheet: Bramblebend.L.md
+Location Sheet: Bramblebend.LS.md
 ```
 
 ### Location Sheets Only Example
@@ -347,8 +347,8 @@ Location Sheet: Bramblebend.L.md
 ## Location Snapshots
 
 ### Location Sheets
-- Bramblebend.L.md
-- Grey_Marches.L.md
+- Bramblebend.LS.md
+- Grey_Marches.LS.md
 ```
 
 ---
@@ -545,7 +545,7 @@ The team is registered for the Torse semifinals and operating under public scrut
 | Training Annex        | Restricted | Guarded by House Calder sentries                   |
 | Gearworks Sublevel C  | Unstable   | Pressure readings exceeding safe thresholds        |
 
-Location Sheet: FortTier.L.md
+Location Sheet: FortTier.LS.md
 
 ---
 
