@@ -149,7 +149,7 @@ This section MAY include levels, attributes, abilities, moves, conditions, or ot
 | HP      | 15 / 20 |
 ```
 
-### Inventory / Equpiment
+### Inventory / Equipment
 
 Items, resources, artifacts, gear, currency, or possessions currently carried or owned by the character.
 
