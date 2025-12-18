@@ -590,9 +590,9 @@ The match horn sounds and the crowd erupts as the Torse semifinals begin. Above,
 | File                          | Purpose                                      |
 |-------------------------------|----------------------------------------------|
 | Torse_Rules_Standard.md       | Official Torse match regulations             |
-| FortTier_Political_Map.md    | Power blocs within the Council of Houses     |
-| House_Calder_Overview.md     | Background and known alliances               |
-| Pressure_Engine_Schematic.png| Partial diagram recovered by the party       |
+| FortTier_Political_Map.md     | Power blocs within the Council of Houses     |
+| House_Calder_Overview.md      | Background and known alliances               |
+| Pressure_Engine_Schematic.png | Partial diagram recovered by the party       |
 
 ---
 ```
