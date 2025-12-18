@@ -62,7 +62,7 @@ The following sections are recommendations only and are not required for validit
 
 These sections MAY include tabular data to represent character stats, inventory, or other structured information.
 
-### Character Backstory
+### 📜 Character Backstory
 
 The narrative history, origin, formative events, or defining moments that occurred for this character.
 
@@ -74,7 +74,7 @@ The narrative history, origin, formative events, or defining moments that occurr
 Elara was raised on the margins of authority, taught early to rely on her own judgment rather than inherited power. She has led before—but never without cost—and every command she gives carries the memory of someone left behind.
 ```
 
-### Character Information
+### 🪪 Character Information
 
 General identifying information such as role, title, species, occupation, age, appearance, or other descriptive traits for this character.
 
@@ -88,7 +88,7 @@ General identifying information such as role, title, species, occupation, age, a
 - Demeanor: Controlled, watchful, slow to trust
 ```
 
-### Character Motivations
+### ⚖️ Character Motivations
 
 Goals, fears, beliefs, ideals, oaths, drives, or unresolved internal conflicts that influence this character's decisions.
 
@@ -100,7 +100,7 @@ Goals, fears, beliefs, ideals, oaths, drives, or unresolved internal conflicts t
 Elara seeks stability without tyranny. She believes order is necessary, but only if it is earned—and she is deeply conflicted whenever leadership demands violence.
 ```
 
-### Character Current State
+### 🩺 Character Current State
 
 The character's present narrative condition, including emotional state, injuries, stress, fatigue, curses, boons, or temporary effects.
 
@@ -114,7 +114,7 @@ This section MAY reflect the character as of the Save Points referenced in the Y
 Elara was wounded during the skirmish at the Broken Bridge. Though physically weakened, her resolve has hardened. She is wary of the choices ahead and troubled by the consequences of mercy shown to an enemy.
 ```
 
-### Character Relationships
+### 🤝 Character Relationships
 
 Important relationships, alliances, rivalries, loyalties, or tensions with other characters, factions, or entities.
 
@@ -129,7 +129,7 @@ Relationships MAY be described narratively or as a structured list.
 - **Captain Vorn** Uneasy truce; mutual respect strained by opposing values
 ```
 
-### Character Stats
+### 🧮 Character Stats
 
 This section MAY include mechanical or quantitative attributes defined by the game system in use.
 
@@ -149,7 +149,7 @@ This section MAY include levels, attributes, abilities, moves, conditions, or ot
 | HP      | 15 / 20 |
 ```
 
-### Inventory / Equipment
+### 🎒 Inventory / Equipment
 
 Items, resources, artifacts, gear, currency, or possessions currently carried or owned by the character.
 
@@ -165,7 +165,7 @@ Item condition, charges, or narrative significance MAY be noted here.
 - The Black Thorn (blade of uncertain origin)
 ```
 
-### Combat Details
+### ⚔️ Combat Details
 
 Combat-relevant information such as attacks, defenses, armor, special actions, reactions, or tactical notes.
 
