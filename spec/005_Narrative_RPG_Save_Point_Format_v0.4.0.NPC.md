@@ -18,6 +18,8 @@ Subheadings within sections are optional unless otherwise specified.
 
 The NPC sections and subsections defined here are suggestions and MAY be extended by the author.
 
+This file is intended for Game Master or Orchestrator use and SHOULD NOT be shared with players unless explicitly desired.
+
 This file format reflects the modularity of NRSP v0.4.0 splitting out the Non-Player Character Sheet.
 
 ---
@@ -50,6 +52,7 @@ Tags:
   - Truce
   - HiddenAgenda
 ---
+```
 
 ### Minimal Example
 
@@ -57,6 +60,7 @@ Tags:
 ---
 Name: Captain Vorn
 ---
+```
 
 ## 🕵️ Non-Player Character Sheet Sections
 
