@@ -56,6 +56,13 @@ Tags:
   - Bridge_Arc
 ---
 
+### Minimal Example
+
+```markdown
+---
+Name: Elara Vance
+```
+
 ## 🧑‍🎤 Character Sheet Sections
 
 The following sections are recommendations only and are not required for validity.
