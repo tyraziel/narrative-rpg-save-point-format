@@ -34,7 +34,7 @@ Each `.LS.md` Location MUST begin with a YAML frontmatter block that defines the
 | CurrentAsOf | ❌ | Optional list of filenames of Save Points for which this Location Sheet is valid |
 | Supersedes | ❌ | Optional filename of a prior Location Sheet this file replaces |
 | SupersededBy | ❌ | Optional filename of a later Location Sheet that replaces this one |
-| Status | ❌ | Optional narrative status (e.g., `Active`, `Abandoned`, `Destroyed`, `Hideen`, `Inaccessible`) |
+| Status | ❌ | Optional narrative status (e.g., `Active`, `Abandoned`, `Destroyed`, `Hidden`, `Inaccessible`) |
 | Tags | ❌ | Optional list of semantic tags for categorization or retrieval |
 
 Field order is not significant; however, the ordering above is recommended for readability.
