@@ -3,6 +3,9 @@
 This document outlines the official version history of the Narrative RPG Save Point Format (NRSP).
 
 ---
+## v0.4 – Major overhaul and specification definition (2025-12-17)
+
+Version 0.4 defines the formal specifications of the NRSP and its companion file types, establishing stable, system-agnostic contracts for long-term use.
 
 ## v0.3 – Modular SaveFile Format (2025-03-27)
 
