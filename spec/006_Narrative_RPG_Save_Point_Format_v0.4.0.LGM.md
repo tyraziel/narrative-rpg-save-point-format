@@ -42,11 +42,25 @@ Field order is not significant; however, the ordering above is recommended for r
 ### Example
 
 ```markdown
+---
+Name: Broken Bridge
+CurrentAsOf:
+  - Conflict_At_The_Broken_Bridge.NRSP.md
+Status: Active
+Tags:
+  - Crossing
+  - Sabotaged
+  - Strategic
+  - Unstable
+---
 ```
 
 ### Minimal Example
 
 ```markdown
+---
+Name: Broken Bridge
+---
 ```
 
 ## 🗺️ Location Game Master Sheet Sections
