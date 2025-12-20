@@ -35,8 +35,8 @@ The **Narrative RPG Save Point Format (NRSP)** is built around the following pri
 - **System-Agnostic First**
   While the format originated in a game inspired by a specific system, NRSP is designed to support *any* narrative RPG, regardless of mechanics, theme, or setting.
 
-- **Human-Readable, AI-Compatible**
-  Markdown is the shared language of humans and machines. Every file should be easily written, parsed, and versioned.
+- **Everything Can Live in One File**
+  NRSP is modular by design, but not modular by force. You can store your entire session — character, story, team, and notes — in a single `.NRSP.md` file, or break it out into as many supporting files as you need.
 
 - **Modularity Is Key**
   Files are separated by type and function (`.NRSP.md`, `.SLD.md`, `.CS.md`, etc.) so creators can mix, match, or extend without breaking structure.
@@ -44,20 +44,20 @@ The **Narrative RPG Save Point Format (NRSP)** is built around the following pri
 - **Narrative Before Numbers**
   Save Points focus on the emotional, narrative, and contextual state of the story — not just stat blocks or battle logs.
 
-- **Git-Friendly**
-  All files are designed to play well with Git for branching timelines, version control, and community collaboration.
-
 - **Respect the Story Space**
   Content should remain broadly PG-13 and inclusive. Stories can go deep — but not off the rails.
 
-- **Everything Can Live in One File**
-  NRSP is modular by design, but not modular by force. You can store your entire session — character, story, team, and notes — in a single `.NRSP.md` file, or break it out into as many supporting files as you need.
+- **Visible Memory System**
+  The entire NRSP specification is open and available, no guesswork, no black box.
+
+- **Git-Friendly**
+  All files are designed to play well with Git for branching timelines, version control, and community collaboration.
+
+- **Human-Readable, AI-Compatible**
+  Markdown is the shared language of humans and machines. Every file should be easily written, parsed, and versioned.
 
 - **RAG Without the Guesswork**
   NRSP gives creators and AI systems deterministic memory access, enabling long-form generation without relying on fuzzy embeddings or arbitrary chunking. It's retrieval-augmented generation, structured for storytellers.
-
-- **Visible Memory System**
-  The entire NRSP specification is open and available, no guesswork, no black box.
 
 ---
 
@@ -65,17 +65,17 @@ The **Narrative RPG Save Point Format (NRSP)** is built around the following pri
 
 NRSP uses a modular file structure where each file type serves a specific narrative or gameplay purpose:
 
-| File Type                    | Extension  | Purpose                                                                                                                     |
-|------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------|
-| Narrative RPG Save Point     | `.NRSP.md` | Captures a narrative arc, including story summary, character state, and links                                               |
-| Session Log Document         | `.SLD.md`  | Optional in- or out-of-world transcript of play notes, rolls, dialogue, decisions, moment-to-moment events of what occurred |
-| Character Sheet              | `.CS.md`   | Represents a player character, companion creature, non-player character, or other entity in the narrative                    |
-| Location Sheet               | `.LS.md`   | Details about a location, town, city, hub, region, plane, galaxy, world                                                        |
-| Non-Player Character         | `.NPC.md`  | Extended details for an individual non-player character, often referenced in Save Points or Locations (may contain hidden to players information) |
-| Location Game Master Information      | `.LGM.md`  | Extended details for a location, often referenced in Save Points  (may contain hidden to players information) |
+| File Type                             | Extension  | Purpose                                                                                                                                           |
+|---------------------------------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Narrative RPG Save Point              | `.NRSP.md` | Captures a narrative arc, including story summary, character state, and links                                                                     |
+| Session Log Document                  | `.SLD.md`  | Optional in- or out-of-world transcript of play notes, rolls, dialogue, decisions, moment-to-moment events of what occurred                       |
+| Character Sheet                       | `.CS.md`   | Represents a player character, companion creature, non-player character, or other entity in the narrative                                         |
+| Location Sheet                        | `.LS.md`   | Details about a location, town, city, hub, region, plane, galaxy, world                                                                           |
+| Non-Player Character                  | `.NPC.md`  | Extended details for an individual non-player character, often referenced in Save Points or Locations (may contain hidden to players information) |
+| Location Game Master Information      | `.LGM.md`  | Extended details for a location, often referenced in Save Points  (may contain hidden to players information)                                     |
 
 All files follow the format: `Name.Type.md`  
-Example: `Zeke.CS.md`, `Arc1.SLD.md`, `Bramblebend.L.md`
+Example: `Zeke.CS.md`, `Arc1.SLD.md`, `Bramblebend.LS.md`
 
 This structure keeps each file focused and swappable, while supporting bundled storytelling across sessions.
 
