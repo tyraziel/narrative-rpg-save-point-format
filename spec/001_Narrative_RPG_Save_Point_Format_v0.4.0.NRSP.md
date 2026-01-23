@@ -32,6 +32,7 @@ Each `.NRSP.md` Save Point MUST begin with a YAML frontmatter block that defines
 | TimelineNote  | ❌        | Optional note describing timeline context or significance |
 | SLD           | ❌        | Optional list of filenames of associated Session Log Documents |
 | Tags | ❌ | Optional list of semantic tags for categorization or retrieval |
+| NRSPFormat | ❌ | Optional (but recommended) format version string (e.g., `0.4.0`). Ensures explicit versioning for validation and tooling |
 
 Field order is not significant; however, the ordering above is recommended for readability.
 
@@ -40,6 +41,7 @@ Field order is not significant; however, the ordering above is recommended for r
 ```markdown
 ---
 Title: The Conflict at the Broken Bridge
+NRSPFormat: 0.4.0
 PreviousSavePoint: ArrivalAtGreyford.NRSP.md
 NextSavePoint: CrossingTheRavine.NRSP.md
 AlternateNext:
@@ -431,6 +433,7 @@ Linked Files is intended for:
 ```markdown
 ---
 Title: The Day the Gears Fell Silent
+NRSPFormat: 0.4.0
 PreviousSavePoint: Arrival_At_FortTier.NRSP.md
 NextSavePoint: The_Final_Torse.NRSP.md
 AlternateNext:

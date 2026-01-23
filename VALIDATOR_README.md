@@ -15,12 +15,20 @@ A Python validator for the Narrative RPG Save Point Format (NRSP) with automatic
 
 The validator uses multiple strategies to detect the format version:
 
-1. **Explicit declaration**: Optional `NRSPFormat` field in YAML frontmatter
+1. **Explicit declaration**: `NRSPFormat` field in YAML frontmatter (recommended)
 2. **Filename patterns**: Detects version from patterns like `v0.4.0`, `v0_4`, `v031`
 3. **Structural analysis**:
    - Checks for v0.4-specific sections (Party State, Linked Files)
    - Detects v0.3 file references (`.T.md` vs `.LS.md`)
 4. **Default**: Assumes latest version (0.4.0) if ambiguous
+
+### NRSPFormat Field Behavior
+
+- **Normal mode**: Missing `NRSPFormat` generates a **warning** (file is still valid)
+- **Strict mode** (`--strict`): Missing `NRSPFormat` generates an **error** (file is invalid)
+- **Fix mode** (`--fix`): Automatically adds `NRSPFormat` with the detected version
+
+**Recommendation**: Always include `NRSPFormat` in your files to avoid ambiguity and ensure future compatibility.
 
 ## Installation
 
@@ -67,10 +75,20 @@ python nrsp_validator.py --directory ./examples
 python nrsp_validator.py --directory ./my_campaign --recursive
 ```
 
-### Strict mode (unknown fields are errors)
+### Strict mode (missing NRSPFormat and unknown fields are errors)
 
 ```bash
 python nrsp_validator.py my_save_point.NRSP.md --strict
+```
+
+### Fix missing NRSPFormat fields
+
+```bash
+# Fix a single file
+python nrsp_validator.py my_save_point.NRSP.md --fix
+
+# Fix all files in a directory
+python nrsp_validator.py --directory ./my_campaign --recursive --fix
 ```
 
 ## Output Examples
@@ -89,8 +107,20 @@ python nrsp_validator.py my_save_point.NRSP.md --strict
 ✓ VALID: examples/my_save.NRSP.md
   File Type: NRSP
   Detected Version: 0.4.0
-  Warnings (1):
+  Warnings (2):
+    ⚠ Missing recommended field 'NRSPFormat' (detected version: 0.4.0)
     ⚠ Unknown YAML field: 'CustomField'
+```
+
+### Using --fix to add NRSPFormat
+
+```bash
+$ python nrsp_validator.py my_save.NRSP.md --fix
+Fixing my_save.NRSP.md...
+✓ Added NRSPFormat: 0.4.0
+✓ VALID: my_save.NRSP.md
+  File Type: NRSP
+  Detected Version: 0.4.0
 ```
 
 ### Invalid file
@@ -131,6 +161,10 @@ Title: My Save Point
 - **NPC**: `Name`
 - **LGM**: `Name`
 
+#### Recommended fields
+
+- **NRSPFormat**: Format version (e.g., `0.4.0`). Highly recommended to avoid version ambiguity.
+
 #### Optional fields
 
 See the [specification files](./spec/) for complete lists of optional fields.
@@ -164,8 +198,9 @@ options:
                         Validate all NRSP files in directory
   --version {0.3,0.4.0}, -v {0.3,0.4.0}
                         Explicitly specify format version
-  --strict, -s          Strict mode (unknown fields are errors)
+  --strict, -s          Strict mode (missing NRSPFormat and unknown fields are errors)
   --recursive, -r       Recursively search directory for NRSP files
+  --fix, -f             Automatically add NRSPFormat field to files missing it
 ```
 
 ## Exit Codes
@@ -195,14 +230,15 @@ python test_nrsp_validator.py
 
 ### Test Coverage
 
-The test suite includes:
+The test suite includes 38 tests covering:
 - Version detection (filename, content structure, explicit declaration)
 - File type detection from extensions
 - YAML frontmatter validation
 - Content structure validation
-- Full file validation
+- Full file validation (with and without NRSPFormat)
 - Directory validation (recursive and non-recursive)
-- Strict mode behavior
+- Strict mode behavior (NRSPFormat enforcement)
+- Auto-fix functionality (adding missing NRSPFormat)
 - Error and warning reporting
 
 ## Integration

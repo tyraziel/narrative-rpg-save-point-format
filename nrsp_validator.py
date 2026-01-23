@@ -12,8 +12,8 @@ Version detection strategies:
 4. Default to latest version (0.4.0) if ambiguous
 
 Usage:
-    python nrsp_validator.py <file_path> [--version VERSION] [--strict]
-    python nrsp_validator.py --directory <dir_path> [--recursive]
+    python nrsp_validator.py <file_path> [--version VERSION] [--strict] [--fix]
+    python nrsp_validator.py --directory <dir_path> [--recursive] [--fix]
 """
 
 import argparse
@@ -232,6 +232,14 @@ class NRSPValidator:
                 else:
                     warnings.append(msg)
 
+        # Check for NRSPFormat field (recommended in v0.4.0+)
+        if 'NRSPFormat' not in yaml_data:
+            msg = f"Missing recommended field 'NRSPFormat' (detected version: {version.value})"
+            if self.strict:
+                errors.append(msg)
+            else:
+                warnings.append(msg)
+
         # Validate specific field types
         if 'TimelineType' in yaml_data:
             valid_types = ['Mainline', 'Branch', 'WhatIf']
@@ -352,6 +360,53 @@ class NRSPValidator:
 
         return results
 
+    def fix_file(self, file_path: Path, detected_version: Version) -> bool:
+        """Add NRSPFormat field to a file if missing"""
+        try:
+            content = file_path.read_text(encoding='utf-8')
+        except Exception as e:
+            print(f"Error reading {file_path}: {e}", file=sys.stderr)
+            return False
+
+        # Extract YAML frontmatter
+        if not content.startswith('---'):
+            print(f"Error: {file_path} has no YAML frontmatter", file=sys.stderr)
+            return False
+
+        parts = content.split('---', 2)
+        if len(parts) < 3:
+            print(f"Error: {file_path} has malformed YAML frontmatter", file=sys.stderr)
+            return False
+
+        yaml_content = parts[1].strip()
+        body = parts[2]
+
+        # Parse YAML
+        try:
+            yaml_data = yaml.safe_load(yaml_content)
+            if yaml_data is None:
+                yaml_data = {}
+        except yaml.YAMLError as e:
+            print(f"Error: {file_path} has invalid YAML: {e}", file=sys.stderr)
+            return False
+
+        # Check if NRSPFormat already exists
+        if 'NRSPFormat' in yaml_data:
+            return True  # Already has the field
+
+        # Add NRSPFormat field
+        yaml_data['NRSPFormat'] = detected_version.value
+
+        # Write back to file
+        try:
+            new_yaml = yaml.dump(yaml_data, default_flow_style=False, sort_keys=False, allow_unicode=True)
+            new_content = f"---\n{new_yaml}---{body}"
+            file_path.write_text(new_content, encoding='utf-8')
+            return True
+        except Exception as e:
+            print(f"Error writing {file_path}: {e}", file=sys.stderr)
+            return False
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -363,6 +418,7 @@ Examples:
   python nrsp_validator.py my_save_point.NRSP.md --version 0.4.0
   python nrsp_validator.py --directory ./examples --recursive
   python nrsp_validator.py my_save_point.NRSP.md --strict
+  python nrsp_validator.py --directory ./campaign --recursive --fix
         """
     )
 
@@ -371,8 +427,9 @@ Examples:
     group.add_argument('--directory', '-d', type=Path, help='Validate all NRSP files in directory')
 
     parser.add_argument('--version', '-v', choices=['0.3', '0.4.0'], help='Explicitly specify format version')
-    parser.add_argument('--strict', '-s', action='store_true', help='Strict mode (unknown fields are errors)')
+    parser.add_argument('--strict', '-s', action='store_true', help='Strict mode (unknown fields and missing NRSPFormat are errors)')
     parser.add_argument('--recursive', '-r', action='store_true', help='Recursively search directory for NRSP files')
+    parser.add_argument('--fix', '-f', action='store_true', help='Automatically add NRSPFormat field to files missing it')
 
     args = parser.parse_args()
 
@@ -388,6 +445,17 @@ Examples:
     if args.file:
         # Validate single file
         result = validator.validate_file(args.file, explicit_version)
+
+        # Fix if requested and NRSPFormat is missing
+        if args.fix and result.detected_version and any('NRSPFormat' in w for w in result.warnings + result.errors):
+            print(f"Fixing {args.file}...")
+            if validator.fix_file(args.file, result.detected_version):
+                print(f"✓ Added NRSPFormat: {result.detected_version.value}")
+                # Re-validate after fix
+                result = validator.validate_file(args.file, explicit_version)
+            else:
+                print(f"✗ Failed to fix {args.file}")
+
         print(result)
         sys.exit(0 if result.valid else 1)
 
@@ -402,6 +470,23 @@ Examples:
         if not results:
             print(f"No NRSP files found in {args.directory}")
             sys.exit(0)
+
+        # Fix files if requested
+        if args.fix:
+            fixed_count = 0
+            for result in results:
+                if result.detected_version and any('NRSPFormat' in w for w in result.warnings + result.errors):
+                    file_path = Path(result.file_path)
+                    if validator.fix_file(file_path, result.detected_version):
+                        print(f"✓ Fixed {file_path.name}: Added NRSPFormat: {result.detected_version.value}")
+                        fixed_count += 1
+                    else:
+                        print(f"✗ Failed to fix {file_path.name}")
+
+            if fixed_count > 0:
+                print(f"\nFixed {fixed_count} file(s). Re-validating...\n")
+                # Re-validate after fixes
+                results = validator.validate_directory(args.directory, args.recursive)
 
         # Print results
         for result in results:
