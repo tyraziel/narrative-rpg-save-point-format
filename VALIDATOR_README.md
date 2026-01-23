@@ -15,7 +15,7 @@ A Python validator for the Narrative RPG Save Point Format (NRSP) with automatic
 
 The validator uses multiple strategies to detect the format version:
 
-1. **Explicit declaration**: Optional `FormatVersion` field in YAML frontmatter
+1. **Explicit declaration**: Optional `NRSPFormat` field in YAML frontmatter
 2. **Filename patterns**: Detects version from patterns like `v0.4.0`, `v0_4`, `v031`
 3. **Structural analysis**:
    - Checks for v0.4-specific sections (Party State, Linked Files)
@@ -173,11 +173,48 @@ options:
 - `0`: All files valid
 - `1`: One or more files invalid or validation error
 
+## Testing
+
+### Run Tests
+
+The validator includes a comprehensive test suite covering all functionality.
+
+```bash
+# Install test dependencies
+pip install -r requirements-dev.txt
+
+# Run all tests
+python -m pytest test_nrsp_validator.py -v
+
+# Run with coverage report
+python -m pytest test_nrsp_validator.py -v --cov=nrsp_validator --cov-report=term-missing
+
+# Run tests using unittest directly
+python test_nrsp_validator.py
+```
+
+### Test Coverage
+
+The test suite includes:
+- Version detection (filename, content structure, explicit declaration)
+- File type detection from extensions
+- YAML frontmatter validation
+- Content structure validation
+- Full file validation
+- Directory validation (recursive and non-recursive)
+- Strict mode behavior
+- Error and warning reporting
+
 ## Integration
 
 ### CI/CD Integration
 
-Add to your GitHub Actions workflow:
+This project includes a GitHub Actions workflow (`.github/workflows/validate.yml`) that:
+- Runs unit tests on Python 3.8-3.12
+- Validates example files
+- Lints code with flake8 and black
+
+Add to your own project's GitHub Actions workflow:
 
 ```yaml
 - name: Validate NRSP files

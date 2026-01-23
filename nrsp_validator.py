@@ -6,7 +6,7 @@ Validates Narrative RPG Save Point Format files (.NRSP.md, .SLD.md, .CS.md, .LS.
 with automatic version detection.
 
 Version detection strategies:
-1. Explicit FormatVersion field in YAML frontmatter (optional)
+1. Explicit NRSPFormat field in YAML frontmatter (optional)
 2. Filename patterns (e.g., v0.4.0, v0_4, v031)
 3. Structural analysis (section headers, file extension references)
 4. Default to latest version (0.4.0) if ambiguous
@@ -115,17 +115,17 @@ class NRSPValidator:
     # Optional YAML fields by file type (v0.4.0)
     OPTIONAL_YAML_FIELDS = {
         FileType.NRSP: ['System', 'PreviousSavePoint', 'NextSavePoint', 'AlternateNext',
-                        'TimelineType', 'ArcID', 'TimelineNote', 'SLD', 'Tags', 'FormatVersion'],
+                        'TimelineType', 'ArcID', 'TimelineNote', 'SLD', 'Tags', 'NRSPFormat'],
         FileType.SLD: ['InGameDate', 'SessionDate', 'SessionDuration', 'SessionNumber',
-                       'System', 'Tags', 'FormatVersion'],
+                       'System', 'Tags', 'NRSPFormat'],
         FileType.CS: ['Type', 'NPCSheet', 'System', 'IntroducedIn', 'CurrentAsOf',
-                      'Supersedes', 'SupersededBy', 'Status', 'Tags', 'FormatVersion'],
+                      'Supersedes', 'SupersededBy', 'Status', 'Tags', 'NRSPFormat'],
         FileType.LS: ['Type', 'GMSheet', 'System', 'IntroducedIn', 'CurrentAsOf',
-                      'Supersedes', 'SupersededBy', 'Status', 'Tags', 'FormatVersion'],
+                      'Supersedes', 'SupersededBy', 'Status', 'Tags', 'NRSPFormat'],
         FileType.NPC: ['Type', 'System', 'IntroducedIn', 'CurrentAsOf', 'Supersedes',
-                       'SupersededBy', 'Status', 'Tags', 'FormatVersion'],
+                       'SupersededBy', 'Status', 'Tags', 'NRSPFormat'],
         FileType.LGM: ['Type', 'System', 'IntroducedIn', 'CurrentAsOf', 'Supersedes',
-                       'SupersededBy', 'Status', 'Tags', 'FormatVersion'],
+                       'SupersededBy', 'Status', 'Tags', 'NRSPFormat'],
     }
 
     # Version-specific sections
@@ -159,8 +159,8 @@ class NRSPValidator:
     def detect_version_from_content(self, content: str, yaml_data: Dict) -> Optional[Version]:
         """Detect version from content structure"""
         # Check for explicit version field
-        if 'FormatVersion' in yaml_data:
-            version_str = str(yaml_data['FormatVersion'])
+        if 'NRSPFormat' in yaml_data:
+            version_str = str(yaml_data['NRSPFormat'])
             if '0.4' in version_str or '0_4' in version_str:
                 return Version.V0_4
             elif '0.3' in version_str or '0_3' in version_str:
@@ -332,15 +332,18 @@ class NRSPValidator:
         results = []
 
         # Find all NRSP files
-        patterns = ['**/*.NRSP.md', '**/*.SLD.md', '**/*.CS.md', '**/*.LS.md',
-                    '**/*.L.md', '**/*.NPC.md', '**/*.LGM.md', '**/*.T.md']
+        extensions = ['*.NRSP.md', '*.SLD.md', '*.CS.md', '*.LS.md',
+                      '*.L.md', '*.NPC.md', '*.LGM.md', '*.T.md']
 
         files_to_validate = set()
-        for pattern in patterns:
-            if recursive:
-                files_to_validate.update(dir_path.glob(pattern))
-            else:
-                files_to_validate.update(dir_path.glob(pattern.lstrip('**/')))
+        if recursive:
+            # Use ** pattern for recursive search
+            for ext in extensions:
+                files_to_validate.update(dir_path.glob(f'**/{ext}'))
+        else:
+            # Use * pattern for non-recursive search
+            for ext in extensions:
+                files_to_validate.update(dir_path.glob(ext))
 
         # Validate each file
         for file_path in sorted(files_to_validate):
