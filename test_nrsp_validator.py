@@ -184,6 +184,37 @@ class TestYAMLValidation(unittest.TestCase):
         errors, warnings = validator.validate_yaml_fields(yaml_data, FileType.NRSP, Version.V0_4)
         self.assertGreater(len(errors), 0)
 
+    def test_missing_nrspformat_warning(self):
+        """Test missing NRSPFormat generates warning in normal mode"""
+        yaml_data = {
+            "Title": "Test"
+        }
+        errors, warnings = self.validator.validate_yaml_fields(yaml_data, FileType.NRSP, Version.V0_4)
+        self.assertGreater(len(warnings), 0)
+        self.assertTrue(any("NRSPFormat" in warning for warning in warnings))
+        self.assertEqual(len(errors), 0)
+
+    def test_missing_nrspformat_strict(self):
+        """Test missing NRSPFormat generates error in strict mode"""
+        validator = NRSPValidator(strict=True)
+        yaml_data = {
+            "Title": "Test"
+        }
+        errors, warnings = validator.validate_yaml_fields(yaml_data, FileType.NRSP, Version.V0_4)
+        self.assertGreater(len(errors), 0)
+        self.assertTrue(any("NRSPFormat" in error for error in errors))
+
+    def test_with_nrspformat_no_warning(self):
+        """Test that files with NRSPFormat don't get warnings"""
+        yaml_data = {
+            "Title": "Test",
+            "NRSPFormat": "0.4.0"
+        }
+        errors, warnings = self.validator.validate_yaml_fields(yaml_data, FileType.NRSP, Version.V0_4)
+        self.assertEqual(len(errors), 0)
+        # Should not have NRSPFormat warning
+        self.assertFalse(any("NRSPFormat" in warning for warning in warnings))
+
 
 class TestFileValidation(unittest.TestCase):
     """Test complete file validation"""
@@ -296,6 +327,106 @@ Title: Test
         path = self.create_temp_file("test.NRSP.md", content)
         result = self.validator.validate_file(path, explicit_version=Version.V0_3)
         self.assertEqual(result.detected_version, Version.V0_3)
+
+    def test_file_without_nrspformat_has_warning(self):
+        """Test that files without NRSPFormat get warning in normal mode"""
+        content = """---
+Title: Test Save Point
+---
+
+## Narrative Context
+
+Test content.
+"""
+        path = self.create_temp_file("test.NRSP.md", content)
+        result = self.validator.validate_file(path)
+        self.assertTrue(result.valid)  # Still valid
+        self.assertGreater(len(result.warnings), 0)
+        self.assertTrue(any("NRSPFormat" in w for w in result.warnings))
+
+    def test_file_without_nrspformat_strict_mode(self):
+        """Test that files without NRSPFormat fail in strict mode"""
+        validator = NRSPValidator(strict=True)
+        content = """---
+Title: Test Save Point
+---
+
+## Narrative Context
+
+Test content.
+"""
+        path = self.create_temp_file("test.NRSP.md", content)
+        result = validator.validate_file(path)
+        self.assertFalse(result.valid)  # Invalid in strict mode
+        self.assertGreater(len(result.errors), 0)
+        self.assertTrue(any("NRSPFormat" in e for e in result.errors))
+
+    def test_file_with_nrspformat_no_warning(self):
+        """Test that files with NRSPFormat don't get warning"""
+        content = """---
+Title: Test Save Point
+NRSPFormat: 0.4.0
+---
+
+## Narrative Context
+
+Test content.
+"""
+        path = self.create_temp_file("test.NRSP.md", content)
+        result = self.validator.validate_file(path)
+        self.assertTrue(result.valid)
+        # Should not have NRSPFormat warning
+        self.assertFalse(any("NRSPFormat" in w for w in result.warnings))
+
+    def test_fix_adds_nrspformat(self):
+        """Test that fix_file adds NRSPFormat to a file"""
+        content = """---
+Title: Test Save Point
+---
+
+## Narrative Context
+
+Test content.
+"""
+        path = self.create_temp_file("test_fix.NRSP.md", content)
+
+        # Verify it's missing NRSPFormat
+        result_before = self.validator.validate_file(path)
+        self.assertTrue(any("NRSPFormat" in w for w in result_before.warnings))
+
+        # Fix the file
+        success = self.validator.fix_file(path, Version.V0_4)
+        self.assertTrue(success)
+
+        # Verify it now has NRSPFormat
+        result_after = self.validator.validate_file(path)
+        self.assertFalse(any("NRSPFormat" in w for w in result_after.warnings))
+
+        # Verify the field was actually added
+        fixed_content = path.read_text(encoding='utf-8')
+        self.assertIn("NRSPFormat:", fixed_content)
+        self.assertIn("0.4.0", fixed_content)
+
+    def test_fix_preserves_existing_nrspformat(self):
+        """Test that fix_file doesn't overwrite existing NRSPFormat"""
+        content = """---
+Title: Test Save Point
+NRSPFormat: 0.4.0
+---
+
+## Narrative Context
+
+Test content.
+"""
+        path = self.create_temp_file("test_no_fix.NRSP.md", content)
+
+        # Try to fix (should do nothing)
+        success = self.validator.fix_file(path, Version.V0_4)
+        self.assertTrue(success)
+
+        # Verify content unchanged
+        fixed_content = path.read_text(encoding='utf-8')
+        self.assertIn("NRSPFormat: 0.4.0", fixed_content)
 
 
 class TestDirectoryValidation(unittest.TestCase):

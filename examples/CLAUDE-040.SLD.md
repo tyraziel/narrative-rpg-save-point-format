@@ -1,6 +1,7 @@
 ---
 SessionLogTitle: Casino Reconnaissance
 SavePoint: example_Heist_SavePoint.NRSP.md
+NRSPFormat: 0.4.0
 ---
 
 ## Opening Scene

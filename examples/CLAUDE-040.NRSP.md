@@ -1,5 +1,6 @@
 ---
 Title: The Datacore Job
+NRSPFormat: 0.4.0
 PreviousSavePoint: Casino_Reconnaissance.NRSP.md
 NextSavePoint: null
 AlternateNext:
