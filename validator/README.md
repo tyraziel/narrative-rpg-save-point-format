@@ -167,7 +167,7 @@ Title: My Save Point
 
 #### Optional fields
 
-See the [specification files](./spec/) for complete lists of optional fields.
+See the [specification files](../spec/) for complete lists of optional fields.
 
 ### Content Structure
 
@@ -301,9 +301,9 @@ These are informational in normal mode. Use `--strict` to treat them as errors.
 
 ## Contributing
 
-Issues and improvements welcome! See [CONTRIBUTING.md](./CONTRIBUTING.md).
+Issues and improvements welcome! See [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ## License
 
 Part of the Narrative RPG Save Point Format project.
-Licensed under [CC BY 4.0](./LICENSE.md)
+Licensed under [CC BY 4.0](../LICENSE.md)
