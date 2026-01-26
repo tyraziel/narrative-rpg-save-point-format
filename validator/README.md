@@ -306,4 +306,4 @@ Issues and improvements welcome! See [CONTRIBUTING.md](../CONTRIBUTING.md).
 ## License
 
 Part of the Narrative RPG Save Point Format project.
-Licensed under [CC BY 4.0](../LICENSE.md)
+Licensed under [MIT License](../LICENSE.md)
