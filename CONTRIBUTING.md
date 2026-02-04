@@ -30,7 +30,7 @@ By contributing you agree to abide by our [Code of Conduct](CODE_OF_CONDUCT.md)
 ## 🤝 License Reminder
 
 By contributing, you agree that your submissions will be available under the same
-[CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/) as the main format.
+[MIT License](LICENSE.md) as the main format.
 
 ---
 

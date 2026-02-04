@@ -3,6 +3,13 @@
 This document outlines the official version history of the Narrative RPG Save Point Format (NRSP).
 
 ---
+
+## License History
+
+**2026-01-26**: Project relicensed from **CC BY 4.0** to **MIT License** to simplify usage, improve compatibility with software projects, and reduce attribution friction while maintaining credit to original creators.
+
+---
+
 ## v0.4 – Major overhaul and specification definition (2025-12-17)
 
 Version 0.4 defines the formal specifications of the NRSP and its companion file types, establishing stable, system-agnostic contracts for long-term use.
@@ -15,7 +22,7 @@ Version 0.3 introduces a fully modular, bundle-ready SavePoint format, designed 
 - Formalized modular file types: `.NRSP.md`, `.SLD.md`, `.CS.md`, `.T.md`, `.NPC.md`
 - Unified SavePoint structure with metadata, player character state, party, NPCs, towns, and linked file references
 - Added project scaffolding: `README.md`, `LICENSE.md`, `CONTRIBUTING.md`, and `CODE_OF_CONDUCT.md`
-- Format officially licensed under Creative Commons CC BY 4.0
+- Format originally licensed under Creative Commons CC BY 4.0 (relicensed to MIT in 2026)
 
 ## v0.2 – Session Log and Timeline Prototype (2025-03-25)
 - Recognized `.NRSF.md` alone was insufficient to reconstruct full narrative context

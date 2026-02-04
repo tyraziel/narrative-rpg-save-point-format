@@ -127,7 +127,7 @@ You're playing an RPG with a character named Zeke. After each major story arc, y
 This repository includes:
 
 - ✅ [spec/001_Narrative_RPG_Save_Point_Format_v0.4.0.NRSP.md](./spec/001_Narrative_RPG_Save_Point_Format_v0.4.0.NRSP.md) – The latest modular SaveFile spec (timeline, character, party, links)  
-- 📄 `LICENSE.md` – Creative Commons Attribution 4.0 License (CC BY 4.0)  
+- 📄 `LICENSE.md` – MIT License  
 
 ---
 
@@ -149,8 +149,8 @@ This allows NRSP to serve as a *narrative retrieval layer* — offering long-ter
 
 ## 🧑‍💻 [License](LICENSE.md)
 
-**Narrative RPG Save Point Format (NRSP) © 2025 – [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**  
-**Andrew Potozniak (Tyraziel)** – *Visionary Player and Lead Designer*  
+**Narrative RPG Save Point Format (NRSP) © 2025 – [MIT License](LICENSE.md)**
+**Andrew Potozniak (Tyraziel)** – *Visionary Player and Lead Designer*
 Co-created and in collaboration with **ChatGPT (OpenAI)** – *AI contributor and system design assistant*
 
 ---
