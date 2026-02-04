@@ -246,7 +246,7 @@ The NRSP ecosystem follows these design rules:
 
 ## 🧑‍💻 [License](LICENSE.md)
 
-**Narrative RPG Save Point Format (NRSP) © 2025 – [MIT License](LICENSE.md)**
+**Narrative RPG Save Point Format (NRSP) © 2025, 2026 – [MIT License](LICENSE.md)**
 
 - **Andrew Potozniak (Tyraziel)** – *Visionary Player and Lead Designer*
 - Co-created and in collaboration with **ChatGPT (OpenAI)** – *AI contributor and system design assistant*
